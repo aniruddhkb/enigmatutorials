@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{minted}
+\graphicspath{{./}}
+\geometry{a4paper, portrait, margin = 1in}
+\title{2: Linear Regression in Pytorch, the Dumb Way}
+\date{\today}
+\author{Aniruddh K Budhgavi \\Enigma, IIIT-B}
+\begin{document}
+    \maketitle 
+    \section{Introduction}
+    Constructing machine learning models using Numpy is a fantastic way 
+    of understanding the nitty-gritties of a particular method, but it is 
+    not an ideal way for more complex models or in production environments.
+    Instead, we use libraries like Pytorch, Tensorflow and Keras. These libraries
+    ensure that you spend less time reinventing the wheel, leaving you free to fine-tune
+    the model without getting bogged down by details. They also make your training process
+    faster by utilizing the GPU (if you have one).
+    \\
+    My personal preference is towards Pytorch (anyone who has used Tensorflow 
+    1.X will understand why). Pytorch has enough utilities to make the process painless
+    but is flexible when it comes to customizations.
+    \section{Installation}
+    It is worth putting a separate section for this because of a few details. The primary
+    complication is due to \textbf{CUDA}, a GPU computing API provided by NVIDIA. The GPU 
+    implementation of Pytorch uses CUDA, so \textbf{you can only use Pytorch with a CUDA-
+    capable NVIDIA GPU}. You can check if your GPU is supported at \url{https://developer.nvidia.com/cuda-gpus}.
+    \\
+    You can install Pytorch from \url{https://pytorch.org/get-started/locally/}. There are 
+    various package managers and builds which are available.
+    \begin{enumerate}
+        \item On Windows, I recommend that you use the Anaconda package manager. Use the latest 
+            stable version of Pytorch, and be sure to check the CUDA version (later the better).
+        \item On Ubuntu, you can install using Pip without any troubles. \textbf{You may have to
+        install CUDA manually}.To do so, visit \url{https://developer.nvidia.com/cuda-downloads}.
+        \item In case your PC is underpowered, you can always run your models in Kaggle.
+        In fact, that is what I do for Deep Learning models, even though I have a GTX 1050. 
+        Kaggle provides (as of writing) 30 hrs per week of an NVIDIA Tesla P100 GPU. 
+        You can even natively import Kaggle datasets without any trouble.
+    \end{enumerate}
+    To check if the installation was successful, open a Jupyter notebook and run:
+    \begin{minted}{python}
+        import torch
+    \end{minted}
+\end{document}
