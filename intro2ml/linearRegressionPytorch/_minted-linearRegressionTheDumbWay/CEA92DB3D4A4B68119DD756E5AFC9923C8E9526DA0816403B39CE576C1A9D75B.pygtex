@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+            \PYG{k}{def} \PYG{n+nf}{forward}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{):}
+                \PYG{k}{return} \PYG{n}{W}\PYG{o}{*}\PYG{n}{X} \PYG{o}{+} \PYG{n}{b}
+            \PYG{k}{def} \PYG{n+nf}{mse}\PYG{p}{(}\PYG{n}{Yhat}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{,} \PYG{n}{m}\PYG{p}{):}
+                \PYG{k}{return} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{/}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{m}\PYG{p}{))}\PYG{o}{*}\PYG{n}{torch}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{Yhat} \PYG{o}{\PYGZhy{}} \PYG{n}{Y}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+            \PYG{k}{def} \PYG{n+nf}{update}\PYG{p}{(}\PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{W\PYGZus{}grad}\PYG{p}{,} \PYG{n}{b\PYGZus{}grad}\PYG{p}{,} \PYG{n}{alpha}\PYG{p}{):}
+                \PYG{n}{W} \PYG{o}{=} \PYG{n}{W} \PYG{o}{\PYGZhy{}}\PYG{n}{alpha}\PYG{o}{*}\PYG{n}{W\PYGZus{}grad}
+                \PYG{n}{b} \PYG{o}{=} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{alpha}\PYG{o}{*}\PYG{n}{b\PYGZus{}grad}
+                \PYG{k}{return} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}
+\end{Verbatim}

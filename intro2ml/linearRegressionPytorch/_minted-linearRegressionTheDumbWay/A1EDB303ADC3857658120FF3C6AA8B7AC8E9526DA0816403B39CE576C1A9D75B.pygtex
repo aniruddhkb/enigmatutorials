@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+            \PYG{n}{X} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{o}{*}\PYG{n}{m}
+            \PYG{n}{W\PYGZus{}optim} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{b\PYGZus{}optim} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{Y} \PYG{o}{=} \PYG{n}{forward}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{W\PYGZus{}optim}\PYG{p}{,} \PYG{n}{b\PYGZus{}optim}\PYG{p}{)} \PYG{o}{+} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{n}{m}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{n}{m}\PYG{o}{*}\PYG{n}{noise\PYGZus{}qty}\PYG{p}{)}
+\end{Verbatim}

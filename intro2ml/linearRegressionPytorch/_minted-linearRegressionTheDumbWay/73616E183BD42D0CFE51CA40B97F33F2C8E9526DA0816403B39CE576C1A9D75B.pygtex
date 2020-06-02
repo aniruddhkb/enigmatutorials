@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{n}{torch}\PYG{o}{.}\PYG{n}{cuda}\PYG{o}{.}\PYG{n}{get\PYGZus{}device\PYGZus{}name}\PYG{p}{()}
+\end{Verbatim}

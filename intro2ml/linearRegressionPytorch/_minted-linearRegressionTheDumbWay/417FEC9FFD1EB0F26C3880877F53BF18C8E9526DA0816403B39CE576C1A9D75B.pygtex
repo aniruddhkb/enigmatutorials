@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+            \PYG{n}{m} \PYG{o}{=} \PYG{l+m+mi}{100} \PYG{c+c1}{\PYGZsh{} Number of data points.}
+            \PYG{n}{noise\PYGZus{}qty} \PYG{o}{=} \PYG{l+m+mf}{0.1} \PYG{c+c1}{\PYGZsh{} How noisy is the data to be generated?}
+            \PYG{n}{alpha} \PYG{o}{=} \PYG{l+m+mf}{0.0001} \PYG{c+c1}{\PYGZsh{} The learning rate.}
+            \PYG{n}{num\PYGZus{}iters} \PYG{o}{=} \PYG{l+m+mi}{100000} \PYG{c+c1}{\PYGZsh{} The number of iterations.}
+\end{Verbatim}

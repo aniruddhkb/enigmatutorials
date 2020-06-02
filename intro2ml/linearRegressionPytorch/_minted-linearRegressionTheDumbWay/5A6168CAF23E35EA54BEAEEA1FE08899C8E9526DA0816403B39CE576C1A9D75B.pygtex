@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+            \PYG{n}{Yhat} \PYG{o}{=} \PYG{n}{forward}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{W}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}\PYG{o}{.}\PYG{n}{detach}\PYG{p}{()}
+            \PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{)}
+            \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Yhat}\PYG{p}{,} \PYG{n}{color} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+            \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}

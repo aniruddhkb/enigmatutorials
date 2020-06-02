@@ -1,0 +1,19 @@
+digraph G {
+    rankdir = "LR"
+    
+    W -> "Ŷ"
+    b -> "Ŷ"
+    X -> "Ŷ"
+
+    "Ŷ" -> cost
+    Y -> cost 
+
+    cost -> "δJ/δW"
+    cost -> "δJ/δb"
+
+    "δJ/δW" -> W
+    "δJ/δb" -> b
+
+    "α" ->W 
+    "α" ->b 
+}
