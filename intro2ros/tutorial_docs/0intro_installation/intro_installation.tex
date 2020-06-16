@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{minted}
+\graphicspath{{./}}
+\geometry{a4paper, portrait, margin = 1in}
+\title{ROS Made Easy//0: Introduction and Installation}
+\date{\today}
+\author{Aniruddh K Budhgavi \\Enigma, IIIT-B}
+\begin{document}
+    \maketitle
+    \section{Important Note}
+    This tutorial was created for \textbf{ROS1 Melodic Morenia}
+    on \textbf{Ubuntu 18.04 Bionic Beaver}, in \textbf{June 2020}. These
+    tutorials expect that you are running a version of Ubuntu.
+    I expect them to become rapidly out of date. It is my hope
+    that Team Enigma will continually maintain and update these tutorials.
+    \section{Introduction: The motivation behind ROS}
+    In any field of software engineering, instead
+    of repeatedly reinventing the wheel, it is better to
+    reuse code. This is accomplished through packages and libraries.
+    This same principle of code reuse is true for robotics.
+    \\
+    \\
+    ROS, or the \textbf{Robot Operating System} provides this
+    functionality. ROS allows you to separate the problem of
+    low-level hardware control from things like motion planning and
+    perception. It provides a standardised and portable mechanism for communication
+    between multiple processes -- both within a system and across a network.
+    It provides tools for robot visualization and simulation
+    and for common tasks like inverse kinematics. ROS can be thought
+    of as an operating system because it provides all the functions
+    that are expected of one. For more details, see \url{http://wiki.ros.org/ROS/Introduction}
+    or the first chapter of \emph{A gentle introduction to ROS}.
+    \\
+    \\
+    Well-designed ROS systems separate the low-level control of
+    hardware and the high-level decision-making into 
+    two (or more) separate programs.
+    \section{Core concepts}
+    Dumby
+    \section{Installation}
+    \begin{enumerate}
+        \item Follow the installation instructions at \url{http://wiki.ros.org/melodic/Installation/Ubuntu}
+        and do a \textbf{full installation}. This is very important, because it provides 
+        many add-ons, including the \textbf{Gazebo simulator} baked into ROS. Getting them 
+        later on and integrating them with ROS later on may be difficult.
+
+        \item Ensure that you add the following line to {\texttt ~/.bashrc}:
+        \begin{minted}{bash}
+            source /opt/ros/setup.bash
+        \end{minted}
+        \item Close all active terminals and open a fresh terminal.
+        \item Run the following command:
+        \begin{minted}{bash}
+            export | grep ROS
+        \end{minted}
+        which should display a bunch of environment variables.
+    \end{enumerate}
+\end{document}
