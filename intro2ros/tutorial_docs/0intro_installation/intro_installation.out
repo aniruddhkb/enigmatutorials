@@ -1,4 +1,11 @@
 \BOOKMARK [1][-]{section.1}{Important Note}{}% 1
-\BOOKMARK [1][-]{section.2}{Introduction: The motivation behind ROS}{}% 2
-\BOOKMARK [1][-]{section.3}{Core concepts}{}% 3
-\BOOKMARK [1][-]{section.4}{Installation}{}% 4
+\BOOKMARK [1][-]{section.2}{Motivation}{}% 2
+\BOOKMARK [1][-]{section.3}{Installation}{}% 3
+\BOOKMARK [1][-]{section.4}{Core concepts}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Packages}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Nodes}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Messages and topics}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Services}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{The parameter server}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.6}{The master}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Looking forward}{}% 11
