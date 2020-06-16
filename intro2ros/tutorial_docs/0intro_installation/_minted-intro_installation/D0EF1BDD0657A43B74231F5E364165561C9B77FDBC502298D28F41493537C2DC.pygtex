@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    ... logging to /home/akb/.ros/log/9ad6f8d6\PYGZhy{}afcd\PYGZhy{}11ea\PYGZhy{}9d13\PYGZhy{}907841080e03
+    /roslaunch\PYGZhy{}akb\PYGZhy{}G3\PYGZhy{}3579\PYGZhy{}16205.log
+    Checking log directory \PYG{k}{for} disk usage. This may take a \PYG{k}{while}.
+    Press Ctrl\PYGZhy{}C to interrupt
+    Done checking log file disk usage. Usage is \PYGZlt{}1GB.
+
+    started roslaunch server http://akb\PYGZhy{}G3\PYGZhy{}3579:32923/
+    ros\PYGZus{}comm version \PYG{l+m}{1}.14.5
+
+
+    \PYG{n+nv}{SUMMARY}
+    \PYG{o}{========}
+
+    PARAMETERS
+        * /rosdistro: melodic
+        * /rosversion: \PYG{l+m}{1}.14.5
+
+    NODES
+
+    auto\PYGZhy{}starting new master
+    process\PYG{o}{[}master\PYG{o}{]}: started with pid \PYG{o}{[}\PYG{l+m}{16353}\PYG{o}{]}
+    \PYG{n+nv}{ROS\PYGZus{}MASTER\PYGZus{}URI}\PYG{o}{=}http://akb\PYGZhy{}G3\PYGZhy{}3579:11311/
+
+    setting /run\PYGZus{}id to 9ad6f8d6\PYGZhy{}afcd\PYGZhy{}11ea\PYGZhy{}9d13\PYGZhy{}907841080e03
+    process\PYG{o}{[}rosout\PYGZhy{}1\PYG{o}{]}: started with pid \PYG{o}{[}\PYG{l+m}{16364}\PYG{o}{]}
+    started core service \PYG{o}{[}/rosout\PYG{o}{]}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{o}{[} INFO\PYG{o}{]} \PYG{o}{[}\PYG{l+m}{1592310832}.800133368\PYG{o}{]}: Starting turtlesim with node name /turtlesim
+    \PYG{o}{[} INFO\PYG{o}{]} \PYG{o}{[}\PYG{l+m}{1592310832}.814790457\PYG{o}{]}: Spawning turtle \PYG{o}{[}turtle1\PYG{o}{]} at \PYG{n+nv}{x}\PYG{o}{=[}\PYG{l+m}{5}.544445\PYG{o}{]},
+     \PYG{n+nv}{y}\PYG{o}{=[}\PYG{l+m}{5}.544445\PYG{o}{]}, \PYG{n+nv}{theta}\PYG{o}{=[}\PYG{l+m}{0}.000000\PYG{o}{]}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} roscore
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtlesim\PYGZus{}node \PYGZus{}\PYGZus{}name:\PYG{o}{=}A
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtlesim\PYGZus{}node \PYGZus{}\PYGZus{}name:\PYG{o}{=}B
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtle\PYGZus{}teleop\PYGZus{}key \PYGZus{}\PYGZus{}name:\PYG{o}{=}C
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtle\PYGZus{}teleop\PYGZus{}key \PYGZus{}\PYGZus{}name:\PYG{o}{=}D
+\end{Verbatim}

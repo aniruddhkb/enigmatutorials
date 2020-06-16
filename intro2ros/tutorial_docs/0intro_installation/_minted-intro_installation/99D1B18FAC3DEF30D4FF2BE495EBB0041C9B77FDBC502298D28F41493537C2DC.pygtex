@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} rostopic \PYG{n+nb}{type} /turtle1/cmd\PYGZus{}vel \PYG{p}{|} rosmsg show
+\end{Verbatim}

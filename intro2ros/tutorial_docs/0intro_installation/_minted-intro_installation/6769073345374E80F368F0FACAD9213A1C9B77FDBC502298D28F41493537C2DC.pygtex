@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+    Node \PYG{o}{[}/teleop\PYGZus{}turtle\PYG{o}{]}
+    Publications:
+        * /rosout \PYG{o}{[}rosgraph\PYGZus{}msgs/Log\PYG{o}{]}
+        * /turtle1/cmd\PYGZus{}vel \PYG{o}{[}geometry\PYGZus{}msgs/Twist\PYG{o}{]}
+
+    Subscriptions: None
+
+    Services:
+        * /teleop\PYGZus{}turtle/get\PYGZus{}loggers
+        * /teleop\PYGZus{}turtle/set\PYGZus{}logger\PYGZus{}level
+
+
+    contacting node http://akb\PYGZhy{}G3\PYGZhy{}3579:40119/ ...
+    Pid: \PYG{l+m}{21190}
+    Connections:
+        * topic: /rosout
+        * to: /rosout
+        * direction: outbound \PYG{o}{(}\PYG{l+m}{53883} \PYGZhy{} \PYG{l+m}{127}.0.0.1:33246\PYG{o}{)} \PYG{o}{[}\PYG{l+m}{22}\PYG{o}{]}
+        * transport: TCPROS
+        * topic: /turtle1/cmd\PYGZus{}vel
+        * to: /turtlesim
+        * direction: outbound \PYG{o}{(}\PYG{l+m}{53883} \PYGZhy{} \PYG{l+m}{127}.0.0.1:33248\PYG{o}{)} \PYG{o}{[}\PYG{l+m}{20}\PYG{o}{]}
+        * transport: TCPROS
+\end{Verbatim}

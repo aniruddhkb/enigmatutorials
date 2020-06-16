@@ -1,3 +1,3 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-                roscore
+    :\PYGZti{}\PYGZdl{} rospack list\PYGZhy{}names
 \end{Verbatim}

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    linear:
+    x: \PYG{l+m}{2}.0
+    y: \PYG{l+m}{0}.0
+    z: \PYG{l+m}{0}.0
+    angular:
+    x: \PYG{l+m}{0}.0
+    y: \PYG{l+m}{0}.0
+    z: \PYG{l+m}{0}.0
+    \PYGZhy{}\PYGZhy{}\PYGZhy{}
+    linear:
+    x: \PYG{l+m}{0}.0
+    y: \PYG{l+m}{0}.0
+    z: \PYG{l+m}{0}.0
+    angular:
+    x: \PYG{l+m}{0}.0
+    y: \PYG{l+m}{0}.0
+    z: \PYG{l+m}{2}.0
+    \PYGZhy{}\PYGZhy{}\PYGZhy{}
+    ...
+\end{Verbatim}

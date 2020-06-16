@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}
+    Node \PYG{o}{[}/turtlesim\PYG{o}{]}
+    Publications:
+        * /rosout \PYG{o}{[}rosgraph\PYGZus{}msgs/Log\PYG{o}{]}
+        * /turtle1/color\PYGZus{}sensor \PYG{o}{[}turtlesim/Color\PYG{o}{]}
+        * /turtle1/pose \PYG{o}{[}turtlesim/Pose\PYG{o}{]}
+
+    Subscriptions:
+        * /turtle1/cmd\PYGZus{}vel \PYG{o}{[}geometry\PYGZus{}msgs/Twist\PYG{o}{]}
+
+    Services:
+        * /clear
+        * /kill
+        * /reset
+        * /spawn
+        * /turtle1/set\PYGZus{}pen
+        * /turtle1/teleport\PYGZus{}absolute
+        * /turtle1/teleport\PYGZus{}relative
+        * /turtlesim/get\PYGZus{}loggers
+        * /turtlesim/set\PYGZus{}logger\PYGZus{}level
+
+
+    contacting node http://akb\PYGZhy{}G3\PYGZhy{}3579:36561/ ...
+    Pid: \PYG{l+m}{21017}
+    Connections:
+        * topic: /rosout
+        * to: /rosout
+        * direction: outbound \PYG{o}{(}\PYG{l+m}{54721} \PYGZhy{} \PYG{l+m}{127}.0.0.1:38478\PYG{o}{)} \PYG{o}{[}\PYG{l+m}{53}\PYG{o}{]}
+        * transport: TCPROS
+        * topic: /turtle1/cmd\PYGZus{}vel
+        * to: /teleop\PYGZus{}turtle \PYG{o}{(}http://akb\PYGZhy{}G3\PYGZhy{}3579:40119/\PYG{o}{)}
+        * direction: inbound \PYG{o}{(}\PYG{l+m}{33248} \PYGZhy{} akb\PYGZhy{}G3\PYGZhy{}3579:53883\PYG{o}{)} \PYG{o}{[}\PYG{l+m}{56}\PYG{o}{]}
+        * transport: TCPROS
+\end{Verbatim}
