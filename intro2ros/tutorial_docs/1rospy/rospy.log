@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.29)  17 JUN 2020 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.29)  17 JUN 2020 17:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -606,6 +606,11 @@ E4.pygtex)
 
 (./_minted-rospy/ECE1F7150473AF5BC846B3B07C474953FD845B45E8D5F78AC3402B0F8A158D
 77.pygtex)
+Overfull \hbox (14.53084pt too wide) in paragraph at lines 1--189
+[][] \OT1/cmr/m/n/10 writes a log mes-sage, which is typ-i-cally printed to \OT
+1/cmtt/m/n/10 STDOUT\OT1/cmr/m/n/10 .For
+ []
+
 \openout3 = `rospy.pyg'.
 
 
@@ -706,10 +711,10 @@ E5.pygtex)
 
 (./_minted-rospy/38DAF7716A81524E3688A566CFBBEBDAEEFF0B171EFA290E6E0F431B0EF2E6
 E4.pygtex)
-<turtle.png, id=117, 501.875pt x 539.01375pt>
+<turtle.png, id=122, 501.875pt x 539.01375pt>
 File: turtle.png Graphic file (type png)
 <use turtle.png>
-Package pdftex.def Info: turtle.png  used on input line 380.
+Package pdftex.def Info: turtle.png  used on input line 384.
 (pdftex.def)             Requested size: 135.89174pt x 145.94688pt.
  [7 <./turtle.png>]
 \openout3 = `rospy.pyg'.
@@ -744,51 +749,36 @@ Package pdftex.def Info: turtle.png  used on input line 380.
 77.pygtex)
 \openout3 = `rospy.pyg'.
 
-runsystem(pygmentize -l bash -f latex -P commandprefix=PYG -F tokenmerge -o _mi
-nted-rospy/CA1EEAD9CAE59CBF0C5D84BC0D92159FEEFF0B171EFA290E6E0F431B0EF2E6E4.pyg
-tex rospy.pyg)...executed.
-
 
 (./_minted-rospy/CA1EEAD9CAE59CBF0C5D84BC0D92159FEEFF0B171EFA290E6E0F431B0EF2E6
 E4.pygtex)
 \openout3 = `rospy.pyg'.
 
-runsystem(pygmentize -l bash -f latex -P commandprefix=PYG -F tokenmerge -o _mi
-nted-rospy/FA52BC576305DE629A35134A44D5DD5FEEFF0B171EFA290E6E0F431B0EF2E6E4.pyg
-tex rospy.pyg)...executed.
-
 
 (./_minted-rospy/FA52BC576305DE629A35134A44D5DD5FEEFF0B171EFA290E6E0F431B0EF2E6
 E4.pygtex)
-Overfull \hbox (4.16844pt too wide) in paragraph at lines 438--440
+Overfull \hbox (4.16844pt too wide) in paragraph at lines 442--444
 []\OT1/cmr/m/n/10 For more in-for-ma-tion, see []$\OT1/cmtt/m/n/10 http : / / w
 iki . ros . org / ROS / Tutorials / WritingPublisherSubscriber %
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 445.
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 445.
  (./rospy.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 441.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 441.
-
-
-Package rerunfilecheck Warning: File `rospy.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rospy.out':
-(rerunfilecheck)             Before: 2B6ECBAD82D3D7FA59F58CD53FE97595;277
-(rerunfilecheck)             After:  BA160626B55396AA8D92F90E0EFFB381;336.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 445.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 445.
+Package rerunfilecheck Info: File `rospy.out' has not changed.
+(rerunfilecheck)             Checksum: BA160626B55396AA8D92F90E0EFFB381;336.
 runsystem(rm rospy.pyg)...executed.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 445.
  ) 
 Here is how much of TeX's memory you used:
- 10188 strings out of 494923
- 174875 string characters out of 6180742
- 313718 words of memory out of 5000000
- 13184 multiletter control sequences out of 15000+600000
+ 10190 strings out of 494923
+ 174893 string characters out of 6180742
+ 316760 words of memory out of 5000000
+ 13185 multiletter control sequences out of 15000+600000
  9398 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  33i,7n,35p,955b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -800,10 +790,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on rospy.pdf (8 pages, 141462 bytes).
+Output written on rospy.pdf (8 pages, 141752 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 74 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
