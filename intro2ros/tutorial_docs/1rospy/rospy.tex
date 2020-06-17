@@ -184,8 +184,12 @@
             with the name \texttt{hello\_world}.
             \item \mintinline{python}{rospy.loginfo("Hello, world!")} writes a log message,
              which is 
-            typically printed to \texttt{STDOUT}. For more information, see 
+            typically printed to \texttt{STDOUT}.For more information, see 
             \url{http://wiki.ros.org/rospy/Overview/Logging}.
+            \item One important point: You cannot define multiple nodes in the
+            body of an executable. You can have multiple nodes from the same executable at the
+            same time by calling the executable multiple times, 
+            but at a time, an executable can spawn only one node.
         \end{enumerate}
         \item Let's edit \texttt{CMakeLists.txt} for \texttt{intro2rospy}.
          Note: This is the \texttt{CMakeLists.txt}
