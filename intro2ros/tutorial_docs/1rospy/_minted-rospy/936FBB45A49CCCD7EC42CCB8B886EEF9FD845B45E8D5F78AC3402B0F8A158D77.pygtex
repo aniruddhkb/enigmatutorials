@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{get\PYGZus{}name}\PYG{p}{())} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} heard \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{))}
+\end{Verbatim}

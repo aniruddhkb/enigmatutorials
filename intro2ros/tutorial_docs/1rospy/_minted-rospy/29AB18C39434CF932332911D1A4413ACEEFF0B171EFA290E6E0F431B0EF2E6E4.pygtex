@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :...scripts\PYGZdl{} chmod \PYG{l+m}{777} hello\PYGZus{}world.py
+\end{Verbatim}

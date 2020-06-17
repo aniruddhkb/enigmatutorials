@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nb}{catkin\PYGZus{}install\PYGZus{}python}\PYG{p}{(}\PYG{l+s}{PROGRAMS}
+    \PYG{l+s}{scripts/hello\PYGZus{}world.py}
+    \PYG{l+s}{DESTINATION} \PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{CATKIN\PYGZus{}PACKAGE\PYGZus{}BIN\PYGZus{}DESTINATION}\PYG{o}{\PYGZcb{}}
+    \PYG{p}{)}
+\end{Verbatim}

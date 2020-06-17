@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nb}{source} \PYGZlt{}path\PYGZhy{}to\PYGZhy{}workspace\PYGZgt{}/intro2ros/devel/setup.bash
+\end{Verbatim}

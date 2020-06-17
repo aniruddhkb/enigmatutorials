@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{}!/usr/bin/env python}
+    \PYG{k+kn}{import} \PYG{n+nn}{rospy}
+    \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{init\PYGZus{}node}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}hello\PYGZus{}world\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello, world!\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

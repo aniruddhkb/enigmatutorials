@@ -1,0 +1,8 @@
+prefix=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel
+
+Name: intro2rospy
+Description: Description of intro2rospy
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    Base path: \PYGZlt{}path\PYGZgt{}intro2ros
+    Source space: \PYGZlt{}path\PYGZgt{}intro2ros/src
+    Build space: \PYGZlt{}path\PYGZgt{}intro2ros/build
+    Devel space: \PYGZlt{}path\PYGZgt{}intro2ros/devel
+    Install space: \PYGZlt{}path\PYGZgt{}intro2ros/install
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} Running command: \PYGZdq{}cmake \PYGZlt{}path\PYGZgt{}intro2ros/src}
+    \PYGZhy{}DCATKIN\PYGZus{}DEVEL\PYGZus{}PREFIX\PYG{o}{=}\PYGZlt{}path\PYGZgt{}intro2ros/devel
+    \PYGZhy{}DCMAKE\PYGZus{}INSTALL\PYGZus{}PREFIX\PYG{o}{=}\PYGZlt{}path\PYGZgt{}intro2ros/install
+    \PYGZhy{}G Unix Makefiles\PYG{l+s+s2}{\PYGZdq{} in \PYGZdq{}}\PYGZlt{}path\PYGZgt{}intro2ros/build\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{l+s+s2}{    \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}DEVEL\PYGZus{}PREFIX: \PYGZlt{}path\PYGZgt{}intro2ros/devel}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using CMAKE\PYGZus{}PREFIX\PYGZus{}PATH: \PYGZlt{}path\PYGZgt{}intro2ros/devel;/opt/ros/melodic}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} This workspace overlays: \PYGZlt{}path\PYGZgt{}intro2ros/devel;/opt/ros/melodic}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Found PythonInterp: /usr/bin/python2 (found suitable version \PYGZdq{}}\PYG{l+m}{2}.7.17\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{l+s+s2}{    , minimum required is \PYGZdq{}}\PYG{l+m}{2}\PYG{l+s+s2}{\PYGZdq{})}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using PYTHON\PYGZus{}EXECUTABLE: /usr/bin/python2}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using Debian Python package layout}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using empy: /usr/bin/empy}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}ENABLE\PYGZus{}TESTING: ON}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Call enable\PYGZus{}testing()}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}TEST\PYGZus{}RESULTS\PYGZus{}DIR: \PYGZlt{}path\PYGZgt{}intro2ros/build/test\PYGZus{}results}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Found gtest sources under \PYGZsq{}/usr/src/googletest\PYGZsq{}: gtests will be built}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Found gmock sources under \PYGZsq{}/usr/src/googletest\PYGZsq{}: gmock will be built}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Found PythonInterp: /usr/bin/python2 (found version \PYGZdq{}}\PYG{l+m}{2}.7.17\PYG{l+s+s2}{\PYGZdq{})}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Using Python nosetests: /usr/bin/nosetests\PYGZhy{}2.7}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} catkin 0.7.23}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} BUILD\PYGZus{}SHARED\PYGZus{}LIBS is on}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} BUILD\PYGZus{}SHARED\PYGZus{}LIBS is on}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} \PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} \PYGZti{}\PYGZti{}  traversing 1 packages in topological order:}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} \PYGZti{}\PYGZti{}  \PYGZhy{} intro2rospy}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} \PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} +++ processing catkin package: \PYGZsq{}intro2rospy\PYGZsq{}}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} ==\PYGZgt{} add\PYGZus{}subdirectory(intro2rospy)}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Configuring done}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Generating done}
+\PYG{l+s+s2}{    \PYGZhy{}\PYGZhy{} Build files have been written to: \PYGZlt{}path\PYGZgt{}intro2ros/build}
+\PYG{l+s+s2}{    \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\PYG{l+s+s2}{    \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} Running command: \PYGZdq{}}make \PYGZhy{}j8 \PYGZhy{}l8\PYG{l+s+s2}{\PYGZdq{} in \PYGZdq{}}\PYGZlt{}path\PYGZgt{}intro2ros/build\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{l+s+s2}{    \PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\end{Verbatim}

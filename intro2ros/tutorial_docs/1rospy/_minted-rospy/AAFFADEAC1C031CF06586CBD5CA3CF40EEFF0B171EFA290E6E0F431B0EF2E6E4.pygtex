@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} roscd
+    :.../workspaces/intro2ros/devel\PYGZdl{} \PYG{n+nb}{cd} ../src
+    :.../workspaces/intro2ros/src\PYGZdl{} catkin\PYGZus{}create\PYGZus{}pkg intro2rospy rospy std\PYGZus{}msgs
+            geometry\PYGZus{}msgs turtlesim
+\end{Verbatim}

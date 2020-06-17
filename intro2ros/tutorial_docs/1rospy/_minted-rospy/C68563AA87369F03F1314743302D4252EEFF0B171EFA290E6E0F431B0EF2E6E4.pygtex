@@ -1,0 +1,57 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    Base path: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros
+    Source space: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/src
+    Build space: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build
+    Devel space: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel
+    Install space: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install
+    Creating symlink \PYG{l+s+s2}{\PYGZdq{}/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/src/CMakeLists.txt\PYGZdq{}} pointing to \PYG{l+s+s2}{\PYGZdq{}/opt/ros/melodic/share/catkin/cmake/toplevel.cmake\PYGZdq{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} Running command: \PYGZdq{}cmake /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/src \PYGZhy{}DCATKIN\PYGZus{}DEVEL\PYGZus{}PREFIX=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel \PYGZhy{}DCMAKE\PYGZus{}INSTALL\PYGZus{}PREFIX=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install \PYGZhy{}G Unix Makefiles\PYGZdq{} in \PYGZdq{}/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build\PYGZdq{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+    \PYGZhy{}\PYGZhy{} The C compiler identification is GNU \PYG{l+m}{7}.5.0
+    \PYGZhy{}\PYGZhy{} The CXX compiler identification is GNU \PYG{l+m}{7}.5.0
+    \PYGZhy{}\PYGZhy{} Check \PYG{k}{for} working C compiler: /usr/bin/cc
+    \PYGZhy{}\PYGZhy{} Check \PYG{k}{for} working C compiler: /usr/bin/cc \PYGZhy{}\PYGZhy{} works
+    \PYGZhy{}\PYGZhy{} Detecting C compiler ABI info
+    \PYGZhy{}\PYGZhy{} Detecting C compiler ABI info \PYGZhy{} \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Detecting C compile features
+    \PYGZhy{}\PYGZhy{} Detecting C compile features \PYGZhy{} \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Check \PYG{k}{for} working CXX compiler: /usr/bin/c++
+    \PYGZhy{}\PYGZhy{} Check \PYG{k}{for} working CXX compiler: /usr/bin/c++ \PYGZhy{}\PYGZhy{} works
+    \PYGZhy{}\PYGZhy{} Detecting CXX compiler ABI info
+    \PYGZhy{}\PYGZhy{} Detecting CXX compiler ABI info \PYGZhy{} \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Detecting CXX compile features
+    \PYGZhy{}\PYGZhy{} Detecting CXX compile features \PYGZhy{} \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}DEVEL\PYGZus{}PREFIX: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel
+    \PYGZhy{}\PYGZhy{} Using CMAKE\PYGZus{}PREFIX\PYGZus{}PATH: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel\PYG{p}{;}/home/akb/Documents/dd\PYGZus{}robot/devel\PYG{p}{;}/home/akb/Documents/four\PYGZus{}dof\PYGZus{}arm/devel\PYG{p}{;}/home/akb/Documents/localROS2/devel\PYG{p}{;}/home/akb/Documents/localROS/devel\PYG{p}{;}/opt/ros/melodic
+    \PYGZhy{}\PYGZhy{} This workspace overlays: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel\PYG{p}{;}/home/akb/Documents/dd\PYGZus{}robot/devel\PYG{p}{;}/home/akb/Documents/four\PYGZus{}dof\PYGZus{}arm/devel\PYG{p}{;}/home/akb/Documents/localROS2/devel\PYG{p}{;}/home/akb/Documents/localROS/devel\PYG{p}{;}/opt/ros/melodic
+    \PYGZhy{}\PYGZhy{} Found PythonInterp: /usr/bin/python2 \PYG{o}{(}found suitable version \PYG{l+s+s2}{\PYGZdq{}2.7.17\PYGZdq{}}, minimum required is \PYG{l+s+s2}{\PYGZdq{}2\PYGZdq{}}\PYG{o}{)}
+    \PYGZhy{}\PYGZhy{} Using PYTHON\PYGZus{}EXECUTABLE: /usr/bin/python2
+    \PYGZhy{}\PYGZhy{} Using Debian Python package layout
+    \PYGZhy{}\PYGZhy{} Using empy: /usr/bin/empy
+    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}ENABLE\PYGZus{}TESTING: ON
+    \PYGZhy{}\PYGZhy{} Call enable\PYGZus{}testing\PYG{o}{()}
+    \PYGZhy{}\PYGZhy{} Using CATKIN\PYGZus{}TEST\PYGZus{}RESULTS\PYGZus{}DIR: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/test\PYGZus{}results
+    \PYGZhy{}\PYGZhy{} Found gtest sources under \PYG{l+s+s1}{\PYGZsq{}/usr/src/googletest\PYGZsq{}}: gtests will be built
+    \PYGZhy{}\PYGZhy{} Found gmock sources under \PYG{l+s+s1}{\PYGZsq{}/usr/src/googletest\PYGZsq{}}: gmock will be built
+    \PYGZhy{}\PYGZhy{} Found PythonInterp: /usr/bin/python2 \PYG{o}{(}found version \PYG{l+s+s2}{\PYGZdq{}2.7.17\PYGZdq{}}\PYG{o}{)}
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread.h
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread.h \PYGZhy{} found
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create \PYGZhy{} not found
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create in pthreads
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create in pthreads \PYGZhy{} not found
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create in pthread
+    \PYGZhy{}\PYGZhy{} Looking \PYG{k}{for} pthread\PYGZus{}create in pthread \PYGZhy{} found
+    \PYGZhy{}\PYGZhy{} Found Threads: TRUE
+    \PYGZhy{}\PYGZhy{} Using Python nosetests: /usr/bin/nosetests\PYGZhy{}2.7
+    \PYGZhy{}\PYGZhy{} catkin \PYG{l+m}{0}.7.23
+    \PYGZhy{}\PYGZhy{} BUILD\PYGZus{}SHARED\PYGZus{}LIBS is on
+    \PYGZhy{}\PYGZhy{} BUILD\PYGZus{}SHARED\PYGZus{}LIBS is on
+    \PYGZhy{}\PYGZhy{} Configuring \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Generating \PYG{k}{done}
+    \PYGZhy{}\PYGZhy{} Build files have been written to: /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} Running command: \PYGZdq{}make \PYGZhy{}j8 \PYGZhy{}l8\PYGZdq{} in \PYGZdq{}/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build\PYGZdq{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    ...
+    \PYG{o}{[}INFO\PYG{o}{]} \PYG{o}{[}\PYGZlt{}time\PYGZgt{}\PYG{o}{]}: /pose\PYGZus{}subscriber\PYGZus{}11334\PYGZus{}1592393854263 heard
+    x: \PYG{l+m}{7}.41065740585
+    y: \PYG{l+m}{8}.16551113129
+    theta: \PYG{l+m}{0}.639999985695
+    linear\PYGZus{}velocity: \PYG{l+m}{0}.0
+    angular\PYGZus{}velocity: \PYG{l+m}{0}.0
+    ...
+\end{Verbatim}

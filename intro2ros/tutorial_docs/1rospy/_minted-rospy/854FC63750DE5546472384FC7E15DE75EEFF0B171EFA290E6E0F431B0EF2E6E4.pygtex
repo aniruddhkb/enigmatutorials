@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYGZhy{}\PYGZhy{} Build files have been written to:
+    \PYGZlt{}path\PYGZgt{}/intro2ros/workspaces/intro2ros/build
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{} Running command: \PYGZdq{}make \PYGZhy{}j8 \PYGZhy{}l8\PYGZdq{} in}
+    \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}path\PYGZgt{}/intro2ros/workspaces/intro2ros/build\PYGZdq{}}
+    \PYG{c+c1}{\PYGZsh{}\PYGZsh{}\PYGZsh{}\PYGZsh{}}
+\end{Verbatim}

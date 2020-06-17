@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} roscore
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtlesim\PYGZus{}node
+    :\PYGZti{}\PYGZdl{} rosrun turtlesim turtle\PYGZus{}teleop\PYGZus{}key
+    :\PYGZti{}\PYGZdl{} rosrun intro2rospy pose\PYGZus{}subscriber.py
+\end{Verbatim}

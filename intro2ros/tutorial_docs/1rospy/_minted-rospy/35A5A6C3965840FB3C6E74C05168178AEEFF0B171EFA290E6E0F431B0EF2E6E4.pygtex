@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    Created file intro2rospy/CMakeLists.txt
+    Created file intro2rospy/package.xml
+    Created folder intro2rospy/src
+    Successfully created files in \PYGZlt{}path\PYGZgt{}/intro2ros/src/intro2rospy.
+    Please adjust the values in package.xml.
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{rospy}\PYG{o}{.}\PYG{n}{spinOnce}\PYG{p}{()}
+\end{Verbatim}

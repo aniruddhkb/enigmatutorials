@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} roscore
+    :\PYGZti{}\PYGZdl{} rosrun intro2rospy hello\PYGZus{}world.py
+\end{Verbatim}

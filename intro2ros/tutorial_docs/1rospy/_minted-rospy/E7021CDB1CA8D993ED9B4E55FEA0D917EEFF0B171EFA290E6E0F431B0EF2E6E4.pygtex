@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} mkdir workspaces
+    :\PYGZti{}\PYGZdl{} \PYG{n+nb}{cd} workspaces
+    :\PYGZti{}/workspaces\PYGZdl{} mkdir intro2ros
+    :\PYGZti{}/workspaces/intro2ros\PYGZdl{} \PYG{n+nb}{cd} intro2ros
+    :\PYGZti{}/workspaces/intro2ros\PYGZdl{} mkdir src
+    :\PYGZti{}/workspaces/intro2ros\PYGZdl{} catkin\PYGZus{}make
+\end{Verbatim}

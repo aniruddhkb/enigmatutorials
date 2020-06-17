@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nb}{cmake\PYGZus{}minimum\PYGZus{}required}\PYG{p}{(}\PYG{l+s}{VERSION} \PYG{l+s}{3.0.2}\PYG{p}{)}
+    \PYG{n+nb}{project}\PYG{p}{(}\PYG{l+s}{intro2rospy}\PYG{p}{)}
+
+    \PYG{n+nb}{find\PYGZus{}package}\PYG{p}{(}\PYG{l+s}{catkin} \PYG{l+s}{REQUIRED} \PYG{l+s}{COMPONENTS}
+        \PYG{l+s}{geometry\PYGZus{}msgs}
+        \PYG{l+s}{rospy}
+        \PYG{l+s}{std\PYGZus{}msgs}
+        \PYG{l+s}{turtlesim}
+    \PYG{p}{)}
+
+    \PYG{n+nb}{catkin\PYGZus{}package}\PYG{p}{()}
+
+    \PYG{n+nb}{include\PYGZus{}directories}\PYG{p}{(}
+        \PYG{l+s}{include}
+        \PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{catkin\PYGZus{}INCLUDE\PYGZus{}DIRS}\PYG{o}{\PYGZcb{}}
+    \PYG{p}{)}
+\end{Verbatim}

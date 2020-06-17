@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{}!/usr/bin/env python}
+    \PYG{k+kn}{import} \PYG{n+nn}{rospy}
+    \PYG{k+kn}{from} \PYG{n+nn}{geometry\PYGZus{}msgs.msg} \PYG{k+kn}{import} \PYG{n}{Twist}
+    \PYG{k+kn}{import} \PYG{n+nn}{random}
+    \PYG{k}{def} \PYG{n+nf}{random\PYGZus{}publisher}\PYG{p}{():}
+        \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{init\PYGZus{}node}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}random\PYGZus{}publisher\PYGZsq{}}\PYG{p}{,} \PYG{n}{anonymous}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+        \PYG{n}{pub} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Publisher}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/turtle1/cmd\PYGZus{}vel\PYGZsq{}}\PYG{p}{,} \PYG{n}{Twist}\PYG{p}{,} \PYG{n}{queue\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{1000}\PYG{p}{)}
+        \PYG{n}{rate} \PYG{o}{=} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{Rate}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+        \PYG{k}{while} \PYG{o+ow}{not} \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{is\PYGZus{}shutdown}\PYG{p}{():}
+            \PYG{n}{to\PYGZus{}publish} \PYG{o}{=} \PYG{n}{Twist}\PYG{p}{()}
+            \PYG{n}{to\PYGZus{}publish}\PYG{o}{.}\PYG{n}{linear}\PYG{o}{.}\PYG{n}{x} \PYG{o}{=}\PYG{n}{random}\PYG{o}{.}\PYG{n}{uniform}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{to\PYGZus{}publish}\PYG{o}{.}\PYG{n}{angular}\PYG{o}{.}\PYG{n}{z} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{uniform}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n}{rospy}\PYG{o}{.}\PYG{n}{loginfo}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{to\PYGZus{}publish}\PYG{p}{))}
+            \PYG{n}{pub}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{to\PYGZus{}publish}\PYG{p}{)}
+            \PYG{n}{rate}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{()}
+
+    \PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{random\PYGZus{}publisher}\PYG{p}{()}
+\end{Verbatim}
