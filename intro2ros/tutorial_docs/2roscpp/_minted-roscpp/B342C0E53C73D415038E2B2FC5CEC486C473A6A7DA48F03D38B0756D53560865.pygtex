@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}ros/ros.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}std\PYGZus{}msgs/String.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+
+    \PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{argc}\PYG{p}{,} \PYG{k+kt}{char}\PYG{o}{**} \PYG{n}{argv}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{init}\PYG{p}{(}\PYG{n}{argc}\PYG{p}{,} \PYG{n}{argv}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}chatter\PYGZus{}pub\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{NodeHandle} \PYG{n}{nh}\PYG{p}{;}
+
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{Publisher} \PYG{n}{pub} \PYG{o}{=} \PYG{n}{nh}\PYG{p}{.}\PYG{n}{advertise}\PYG{o}{\PYGZlt{}}\PYG{n}{std\PYGZus{}msgs}\PYG{o}{::}\PYG{n}{String}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}chatter\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{);}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{Rate} \PYG{n}{rate}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{);}
+
+        \PYG{k}{while}\PYG{p}{(}\PYG{n}{ros}\PYG{o}{::}\PYG{n}{ok}\PYG{p}{())}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{std}\PYG{o}{::}\PYG{n}{string} \PYG{n}{str}\PYG{p}{;}
+            \PYG{n}{getline}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{n}{cin}\PYG{p}{,}\PYG{n}{str}\PYG{p}{);}
+
+            \PYG{n}{std}\PYG{o}{::}\PYG{n}{string} \PYG{n}{nodeName} \PYG{o}{=} \PYG{n}{ros}\PYG{o}{::}\PYG{n}{this\PYGZus{}node}\PYG{o}{::}\PYG{n}{getName}\PYG{p}{();}
+
+            \PYG{n}{std\PYGZus{}msgs}\PYG{o}{::}\PYG{n}{String} \PYG{n}{msg}\PYG{p}{;}
+            \PYG{n}{msg}\PYG{p}{.}\PYG{n}{data} \PYG{o}{=} \PYG{n}{nodeName} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}: \PYGZdq{}} \PYG{o}{+} \PYG{n}{str}\PYG{p}{;}
+
+            \PYG{n}{pub}\PYG{p}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{);}
+            \PYG{n}{rate}\PYG{p}{.}\PYG{n}{sleep}\PYG{p}{();}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

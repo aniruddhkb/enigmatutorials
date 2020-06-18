@@ -17,7 +17,7 @@ include_directories(
 
 catkin_install_python(PROGRAMS
   scripts/hello_world.py
-  script/random_publisher.py
-  script/pose_subscriber.py
+  scripts/random_publisher.py
+  scripts/pose_subscriber.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ros}\PYG{o}{::}\PYG{n}{this\PYGZus{}node}\PYG{o}{::}\PYG{n}{getName}\PYG{p}{()}
+\end{Verbatim}

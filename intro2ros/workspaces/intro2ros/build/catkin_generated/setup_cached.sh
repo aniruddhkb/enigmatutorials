@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH="/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build"

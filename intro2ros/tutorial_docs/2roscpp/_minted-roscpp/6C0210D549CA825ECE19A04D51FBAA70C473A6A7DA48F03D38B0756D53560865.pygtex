@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{std\PYGZus{}msgs}\PYG{o}{::}\PYG{n}{String} \PYG{n}{msg}\PYG{p}{;}
+\PYG{n}{msg}\PYG{p}{.}\PYG{n}{data} \PYG{o}{=} \PYG{n}{nodeName} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}: \PYGZdq{}} \PYG{o}{+} \PYG{n}{str}\PYG{p}{;}
+\end{Verbatim}

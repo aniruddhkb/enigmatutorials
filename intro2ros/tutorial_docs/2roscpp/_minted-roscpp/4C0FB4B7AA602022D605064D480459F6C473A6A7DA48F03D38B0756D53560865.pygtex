@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}ros/ros.h\PYGZgt{}}
+    \PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{argc}\PYG{p}{,} \PYG{k+kt}{char}\PYG{o}{**} \PYG{n}{argv}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{init}\PYG{p}{(}\PYG{n}{argc}\PYG{p}{,} \PYG{n}{argv}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}hello\PYGZus{}world\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{NodeHandle} \PYG{n}{nh}\PYG{p}{;}
+        \PYG{n}{ROS\PYGZus{}INFO\PYGZus{}STREAM}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Hello, world!\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

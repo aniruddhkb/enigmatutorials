@@ -56,3 +56,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/intro2rospy" TYPE PROGRAM FILES "/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/intro2rospy/catkin_generated/installspace/hello_world.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/intro2rospy" TYPE PROGRAM FILES "/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/intro2rospy/catkin_generated/installspace/random_publisher.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/intro2rospy" TYPE PROGRAM FILES "/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/intro2rospy/catkin_generated/installspace/pose_subscriber.py")
+endif()
+

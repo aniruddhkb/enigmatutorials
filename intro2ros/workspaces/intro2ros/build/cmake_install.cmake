@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/gtest/cmake_install.cmake")
+  include("/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/intro2roscpp/cmake_install.cmake")
   include("/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/build/intro2rospy/cmake_install.cmake")
 
 endif()

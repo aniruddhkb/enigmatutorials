@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    :\PYGZti{}\PYGZdl{} roscore
+    :\PYGZti{}\PYGZdl{} rosrun intro2roscpp chatter\PYGZus{}pub
+    :\PYGZti{}\PYGZdl{} rostopic \PYG{n+nb}{echo} chatter
+\end{Verbatim}

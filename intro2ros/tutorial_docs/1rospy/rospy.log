@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.29)  17 JUN 2020 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.29)  18 JUN 2020 10:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -703,15 +703,19 @@ E4.pygtex) [5]
 77.pygtex)
 \openout3 = `rospy.pyg'.
 
+runsystem(pygmentize -l cmake -f latex -P commandprefix=PYG -F tokenmerge -o _m
+inted-rospy/FDB36F31A9A8DDDC834FDA4B3BA865C598C8CEAAA437BBAB0684B736E75777E5.py
+gtex rospy.pyg)...executed.
+
  [6]
-(./_minted-rospy/AEF8AE88640160A217165550E6215A6098C8CEAAA437BBAB0684B736E75777
+(./_minted-rospy/FDB36F31A9A8DDDC834FDA4B3BA865C598C8CEAAA437BBAB0684B736E75777
 E5.pygtex)
 \openout3 = `rospy.pyg'.
 
 
 (./_minted-rospy/38DAF7716A81524E3688A566CFBBEBDAEEFF0B171EFA290E6E0F431B0EF2E6
 E4.pygtex)
-<turtle.png, id=122, 501.875pt x 539.01375pt>
+<turtle.png, id=126, 501.875pt x 539.01375pt>
 File: turtle.png Graphic file (type png)
 <use turtle.png>
 Package pdftex.def Info: turtle.png  used on input line 384.
@@ -762,30 +766,26 @@ Overfull \hbox (4.16844pt too wide) in paragraph at lines 442--443
 iki . ros . org / ROS / Tutorials / WritingPublisherSubscriber %
  []
 
+runsystem(rm _minted-rospy/AEF8AE88640160A217165550E6215A6098C8CEAAA437BBAB0684
+B736E75777E5.pygtex)...executed.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
 [8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
  (./rospy.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
-
-
-Package rerunfilecheck Warning: File `rospy.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `rospy.out':
-(rerunfilecheck)             Before: BA160626B55396AA8D92F90E0EFFB381;336
-(rerunfilecheck)             After:  CE452CF0BE5849B90D3CBF6B5B26B614;384.
+Package rerunfilecheck Info: File `rospy.out' has not changed.
+(rerunfilecheck)             Checksum: CE452CF0BE5849B90D3CBF6B5B26B614;384.
 runsystem(rm rospy.pyg)...executed.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
  ) 
 Here is how much of TeX's memory you used:
- 10191 strings out of 494923
- 174902 string characters out of 6180742
+ 10193 strings out of 494923
+ 174977 string characters out of 6180742
  317027 words of memory out of 5000000
- 13185 multiletter control sequences out of 15000+600000
+ 13186 multiletter control sequences out of 15000+600000
  9398 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  33i,7n,35p,955b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -797,10 +797,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on rospy.pdf (8 pages, 142349 bytes).
+Output written on rospy.pdf (8 pages, 142426 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 198 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  76 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 62 words of extra memory for PDF output out of 10000 (max. 10000000)
 

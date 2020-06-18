@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{rate}\PYG{p}{.}\PYG{n}{sleep}\PYG{p}{()}
+\end{Verbatim}

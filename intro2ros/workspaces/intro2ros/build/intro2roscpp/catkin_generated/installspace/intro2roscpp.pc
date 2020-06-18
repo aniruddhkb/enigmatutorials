@@ -1,0 +1,8 @@
+prefix=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install
+
+Name: intro2roscpp
+Description: Description of intro2roscpp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

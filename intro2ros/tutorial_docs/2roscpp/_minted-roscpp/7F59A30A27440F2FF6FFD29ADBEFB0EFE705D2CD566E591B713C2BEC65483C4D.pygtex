@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nb}{add\PYGZus{}executable}\PYG{p}{(}\PYG{l+s}{chatter\PYGZus{}pub} \PYG{l+s}{src/chatter\PYGZus{}pub.cpp}\PYG{p}{)}
+    \PYG{n+nb}{target\PYGZus{}link\PYGZus{}libraries}\PYG{p}{(}\PYG{l+s}{chatter\PYGZus{}pub} \PYG{o}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{catkin\PYGZus{}LIBRARIES}\PYG{o}{\PYGZcb{}}\PYG{p}{)}
+\end{Verbatim}

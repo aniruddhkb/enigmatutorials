@@ -1,2 +1,2 @@
-intro2rospy
+intro2roscpp:intro2rospy
 -DCATKIN_DEVEL_PREFIX=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel -DCMAKE_INSTALL_PREFIX=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install -G Unix Makefiles

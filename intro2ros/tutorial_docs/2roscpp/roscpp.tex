@@ -1,0 +1,283 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{LightGray}{rgb}{0.85,0.85,0.85}
+\graphicspath{{./}}
+\geometry{a4paper, portrait, margin = 1in}
+\title{ROS Made Easy \\2: Roscpp}
+\date{\today}
+\author{Aniruddh K Budhgavi \\Enigma, IIIT-B}
+\begin{document}
+    \maketitle
+    \section{Important Note}
+    This tutorial was created for \textbf{ROS1 Melodic Morenia}
+    on \textbf{Ubuntu 18.04 Bionic Beaver}, in \textbf{June 2020}.
+    I expect them to become rapidly out of date. It is my hope
+    that Team Enigma will continually maintain and update these tutorials.
+    \\
+    \\
+    This tutorial assumes that you are running Ubuntu, and have at least an
+    elementary grasp of Python 2.7 and C/C++ .
+    \\
+    \\
+    All the code for this tutorial is available at \url{https://github.com/aniruddhkb/enigmatutorials}.
+    \\
+    \\
+    The aim of this tutorial is to make you \emph{functional} in ROS, not to make you a master. For 
+    that, look elsewhere.
+    \section{Your first ROSCpp node}
+        \begin{enumerate}
+            \item Create a package \texttt{intro2roscpp} in the \texttt{src} folder of 
+            the \texttt{intro2ros} workspace. To do this, run:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    .../intro2ros/src$ catkin_create_pkg intro2roscpp roscpp std_msgs
+            \end{minted}
+            \item In \texttt{intro2roscpp/src}, create \texttt{hello\_world.cpp}. The file:
+            \begin{minted}[bgcolor=LightGray]{cpp}
+    #include<ros/ros.h>
+    int main(int argc, char** argv)
+    {
+        ros::init(argc, argv, "hello_world");
+        ros::NodeHandle nh;
+        ROS_INFO_STREAM("Hello, world!");
+        return 0;
+    }
+            \end{minted}
+            Line by line:
+            \begin{enumerate}
+                \item \mintinline{cpp}{#include<ros/ros.h>} is to include the header file for 
+                ROSCpp. VS Code may yell when you do this -- the solution is to add 
+                \texttt{/opt/ros/melodic/include} to your C++ include path. VS Code should tell 
+                you how to do this.
+                \item \mintinline{cpp}{int main(int argc, char** argv)} is so that you can handle 
+                command-line arguments. This is necessary only when you wish to rename your node or 
+                change some initial parameters -- but is present as a default for the next step.
+                \item \mintinline{cpp}{ros::init(argc, argv, "hello_world");} is to initialize the 
+                node, with the default name \texttt{hello\_world} and to pass the command-line arguments 
+                so that any changes at runtime can be implemented. \textbf{You must do this before starting 
+                or using any node}.
+                \item \mintinline{cpp}{ros::NodeHandle nh;} is to start the node. There is a subtle difference 
+                between initializing and starting the node. The ROS documentation says, "Initializing the node
+                simply reads the command line arguments and environment to figure out things like the node
+                name, namespace and remappings. It does not contact the master.".
+                \item As with ROSPy, we can only start handle one node per executable file at a time. We can 
+                create multiple copies of the same node by running the executable multiple times, but we 
+                can't have the same instance of the executable create two nodes.
+                \item The node is started when the first \texttt{NodeHandle} is created and shut down when 
+                the last \texttt{NodeHandle} is destroyed. For more information, see \url{http://wiki.ros.org/roscpp/Overview/Initialization%20and%20Shutdown}
+                \item \mintinline{cpp}{ROS_INFO_STREAM("Hello, world!");} prints to the log level \texttt{info}
+                for that node.
+            \end{enumerate}
+            \item Let's modify \texttt{CMakeLists.txt}. The file should look like:
+            \begin{minted}[bgcolor=LightGray]{cmake}
+    cmake_minimum_required(VERSION 3.0.2)
+    project(intro2roscpp)
+    
+    find_package(catkin REQUIRED COMPONENTS
+        roscpp
+        std_msgs
+    )
+    
+    catkin_package()
+    
+    include_directories(
+        include
+        ${catkin_INCLUDE_DIRS}
+    )
+            \end{minted}
+            \item Add the following lines to \texttt{CMakeLists.txt}:
+            \begin{minted}[bgcolor=LightGray]{cmake}
+    add_executable(hello_world src/hello_world.cpp)
+    target_link_libraries(hello_world ${catkin_LIBRARIES})
+            \end{minted}
+            The first line specifies that we wish to build \texttt{hello\_world}
+            from \texttt{src/hello\_world.cpp}. The second line says that we wish 
+            to link the libraries of catkin to the executable we are building.
+            \item Run \texttt{catkin\_make} from the workspace folder. Output:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    Base path: <path>/intro2ros
+    Source space: <path>/intro2ros/src
+    Build space: <path>/intro2ros/build
+    Devel space: <path>/intro2ros/devel
+    Install space: <path>/intro2ros/install
+    ####
+    #### Running command:
+         "make cmake_check_build_system" in "<path>/intro2ros/build"
+    ####
+    -- Using CATKIN_DEVEL_PREFIX: <path>/intro2ros/devel
+    -- Using CMAKE_PREFIX_PATH: <path>/intro2ros/devel;/opt/ros/melodic
+    -- This workspace overlays: <path>/intro2ros/devel;/opt/ros/melodic
+    -- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17",
+         minimum required is "2") 
+    -- Using PYTHON_EXECUTABLE: /usr/bin/python2
+    -- Using Debian Python package layout
+    -- Using empy: /usr/bin/empy
+    -- Using CATKIN_ENABLE_TESTING: ON
+    -- Call enable_testing()
+    -- Using CATKIN_TEST_RESULTS_DIR: <path>/intro2ros/build/test_results
+    -- Found gtest sources under '/usr/src/googletest': gtests will be built
+    -- Found gmock sources under '/usr/src/googletest': gmock will be built
+    -- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
+    -- Using Python nosetests: /usr/bin/nosetests-2.7
+    -- catkin 0.7.23
+    -- BUILD_SHARED_LIBS is on
+    -- BUILD_SHARED_LIBS is on
+    -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -- ~~  traversing 2 packages in topological order:
+    -- ~~  - intro2roscpp
+    -- ~~  - intro2rospy
+    -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    -- +++ processing catkin package: 'intro2roscpp'
+    -- ==> add_subdirectory(intro2roscpp)
+    -- +++ processing catkin package: 'intro2rospy'
+    -- ==> add_subdirectory(intro2rospy)
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: <path>/intro2ros/build
+    ####
+    #### Running command: "make -j8 -l8" in "<path>/intro2ros/build"
+    ####
+    Scanning dependencies of target hello_world
+    [ 50%] Building CXX object 
+        intro2roscpp/CMakeFiles/hello_world.dir/src/hello_world.cpp.o
+    [100%] Linking CXX executable 
+        <path>/intro2ros/devel/lib/intro2roscpp/hello_world
+    [100%] Built target hello_world
+            \end{minted}
+            You may see a failure if the libraries are not linked properly, or if there 
+            is an error in the C++ file.
+            \item In two terminals, run:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    :~$ roscore
+    :~$ rosrun intro2roscpp hello_world
+            \end{minted}
+            Output:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    [ INFO] [1592456814.700655274]: Hello, world!
+            \end{minted}
+            Next, Let's make a simple publisher.
+        \end{enumerate}
+        \newpage
+    \section{Making a publisher}
+        \begin{enumerate}
+            \item Make \texttt{chatter\_pub.cpp} in \texttt{intro2roscpp/src}. The file:
+            \begin{minted}[bgcolor=LightGray]{cpp}
+    #include<ros/ros.h>
+    #include<std_msgs/String.h>
+    #include<iostream>
+
+    int main(int argc, char** argv)
+    {
+        ros::init(argc, argv, "chatter_pub");
+        ros::NodeHandle nh;
+
+        ros::Publisher pub = nh.advertise<std_msgs::String>("chatter", 1000);
+        ros::Rate rate(2);
+
+        while(ros::ok())
+        {
+            std::string str;
+            getline(std::cin,str);
+
+            std::string nodeName = ros::this_node::getName();
+
+            std_msgs::String msg;
+            msg.data = nodeName + ": " + str;
+
+            pub.publish(msg);
+            rate.sleep();
+        }
+        return 0;   
+    }
+            \end{minted}
+            Line by line:
+            \begin{enumerate}
+                \item \mintinline{cpp}{#include<std_msgs/String.h>} -- Like in Python, we need to import 
+                the messages we wish to use.
+                \item \mintinline{cpp}{nh.advertise<std_msgs::String>("chatter", 1000)} gives us a publisher
+                of \texttt{std\_msgs/String} messages to the topic \texttt{chatter} with a queue size of \texttt{1000}.
+                \item \mintinline{cpp}{ros::Rate rate(2)} gives us a 2 Hertz rate object.
+                \item \mintinline{cpp}{ros::ok()} checks whether the node has shut down.
+                \item \mintinline{cpp}{ros::this_node::getName()} gives the full name of this node.
+                \item The next two lines,
+                \begin{minted}{cpp}
+std_msgs::String msg;
+msg.data = nodeName + ": " + str;
+                \end{minted}
+                Create a message of type \texttt{std\_msgs/String} and assign it accordingly.
+                \item \mintinline{cpp}{pub.publish(msg)} publishes the message.
+                \item \mintinline{cpp}{rate.sleep()} ensures that the publishing rate never crosses 2 Hertz.
+            \end{enumerate}
+            \item Add the following lines to \texttt{CMakeLists.txt}:
+            \begin{minted}[bgcolor=LightGray]{cmake}
+    add_executable(chatter_pub src/chatter_pub.cpp)
+    target_link_libraries(chatter_pub ${catkin_LIBRARIES})
+            \end{minted}
+            \item Run \texttt{catkin\_make} in the workspace folder.
+            \item Now, in three terminals, run:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    :~$ roscore
+    :~$ rosrun intro2roscpp chatter_pub
+    :~$ rostopic echo chatter 
+            \end{minted}
+            In the second terminal, any messages you enter through \texttt{STDIN} will be 
+            published to the topic \texttt{chatter}. We are monitoring this topic in the third 
+            terminal. Output at the third terminal is like this:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    data: "/chatter_pub: Welcome to Enigma"
+    ---
+    data: "/chatter_pub: The airspeed of an unladen swallow"
+    ---
+    data: "/chatter_pub: An African or European swallow?"
+    ---    
+            \end{minted}
+            Let us now make a subscriber object.
+        \end{enumerate}
+    \section{Making a subscriber}
+        \begin{enumerate}
+            \item Make a file \texttt{chatter\_sub.cpp}. The file:
+            \begin{minted}[bgcolor=LightGray]{cpp}
+    #include<ros/ros.h>
+    #include<std_msgs/String.h>
+    #include<iostream>
+
+    void callback(const std_msgs::String::ConstPtr &msg)
+    {
+        std::cout << (msg->data) << std::endl;
+    }
+
+    int main(int argc, char** argv)
+    {
+        ros::init(argc, argv, "chatter_sub");
+        ros::NodeHandle nh;
+
+        ros::Subscriber sub = nh.subscribe("chatter", 1000, &callback);
+        ros::spin();
+        return 0;
+    }
+            \end{minted}
+            Line by line:
+            \begin{enumerate}
+                \item \mintinline{cpp}{nh.subscribe("chatter", 1000, &callback)} creates
+                a subscriber to the topic \texttt{chatter} with a queue size of \texttt{1000}
+                which runs \texttt{callback} every time it receives a message.
+                \item \mintinline{cpp}{ros::spin()} hands over control of execution to ROS so 
+                that the callback function can be executed.
+            \end{enumerate}
+            \item Make the changes in \texttt{CMakeLists.txt}, build the package, and run the publisher
+            and subscriber nodes. The text entered at the publisher terminal should show up at the subscriber
+            terminal like this:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    /chatter_pub: Hello, there!
+    /chatter_pub: General Kenobi, you are a bold one!
+            \end{minted}
+        \end{enumerate}
+        \section{Looking ahead}
+        You can now build publisher and subscriber nodes in ROSCpp as well as ROSPy. Next time,
+        we will look at using services and the parameter server.
+\end{document}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}ros/ros.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}std\PYGZus{}msgs/String.h\PYGZgt{}}
+    \PYG{c+cp}{\PYGZsh{}include}\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+
+    \PYG{k+kt}{void} \PYG{n+nf}{callback}\PYG{p}{(}\PYG{k}{const} \PYG{n}{std\PYGZus{}msgs}\PYG{o}{::}\PYG{n}{String}\PYG{o}{::}\PYG{n}{ConstPtr} \PYG{o}{\PYGZam{}}\PYG{n}{msg}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{std}\PYG{o}{::}\PYG{n}{cout} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{p}{(}\PYG{n}{msg}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{data}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{n}{std}\PYG{o}{::}\PYG{n}{endl}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{argc}\PYG{p}{,} \PYG{k+kt}{char}\PYG{o}{**} \PYG{n}{argv}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{init}\PYG{p}{(}\PYG{n}{argc}\PYG{p}{,} \PYG{n}{argv}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}chatter\PYGZus{}sub\PYGZdq{}}\PYG{p}{);}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{NodeHandle} \PYG{n}{nh}\PYG{p}{;}
+
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{Subscriber} \PYG{n}{sub} \PYG{o}{=} \PYG{n}{nh}\PYG{p}{.}\PYG{n}{subscribe}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}chatter\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{o}{\PYGZam{}}\PYG{n}{callback}\PYG{p}{);}
+        \PYG{n}{ros}\PYG{o}{::}\PYG{n}{spin}\PYG{p}{();}
+        \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}
