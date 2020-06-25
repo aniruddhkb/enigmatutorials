@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}include} \PYG{n+na}{file=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find intro2launch)/launch/firstLaunch.launch\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

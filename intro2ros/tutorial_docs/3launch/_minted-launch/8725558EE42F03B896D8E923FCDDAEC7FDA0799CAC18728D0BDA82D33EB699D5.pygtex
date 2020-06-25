@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{...} \PYG{n+na}{pkg=}\PYG{l+s}{...} \PYG{n+na}{type=}\PYG{l+s}{...} \PYG{n+nt}{/\PYGZgt{}}
+\end{Verbatim}

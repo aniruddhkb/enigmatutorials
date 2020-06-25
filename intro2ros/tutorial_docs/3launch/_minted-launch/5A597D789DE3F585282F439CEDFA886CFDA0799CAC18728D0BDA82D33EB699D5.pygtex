@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}turtlesim\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}turtlesim\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}turtlesim\PYGZus{}node\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}teleop\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}turtlesim\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}turtle\PYGZus{}teleop\PYGZus{}key\PYGZdq{}}
+         \PYG{n+na}{launch\PYGZhy{}prefix=}\PYG{l+s}{\PYGZdq{}gnome\PYGZhy{}terminal \PYGZhy{}e\PYGZdq{}} \PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

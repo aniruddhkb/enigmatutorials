@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{xcolor}
+\definecolor{LightGray}{rgb}{0.85,0.85,0.85}
+\graphicspath{{./}}
+\geometry{a4paper, portrait, margin = 1in}
+\title{ROS Made Easy \\3: Launch Files and the Parameter Server}
+\date{\today}
+\author{Aniruddh K Budhgavi \\Enigma, IIIT-B}
+\begin{document}
+    \maketitle
+    \section{Important Note}
+    This tutorial was created for \textbf{ROS1 Melodic Morenia}
+    on \textbf{Ubuntu 18.04 Bionic Beaver}, in \textbf{June 2020}.
+    I expect them to become rapidly out of date. It is my hope
+    that Team Enigma will continually maintain and update these tutorials.
+    \\
+    \\
+    This tutorial assumes that you are running Ubuntu, and have at least an
+    elementary grasp of Python 2.7 and C/C++ .
+    \\
+    \\
+    All the code for this tutorial is available at \url{https://github.com/aniruddhkb/enigmatutorials}.
+    \\
+    \\
+    The aim of this tutorial is to make you \emph{functional} in ROS, not to make you a master. For 
+    that, look elsewhere.
+    \section{Launch files}
+        \subsection{Introduction}
+        \begin{enumerate}
+            \item One thing that has been very clunky so far is that we have to manually start 
+            the master and every node in its own individual terminal window. This is fine for 
+            small environments like Turtlesim, but completely unsuitable for larger projects.
+            Further, it is apparent that on many occasions, there are nodes which naturally work
+            together and must be spawned together as a group. It is clear that we need a process 
+            for launching nodes in bulk, instead of messing around with individual terminals.
+
+            \item All this functionality is provided by \textbf{launch files}.
+        \end{enumerate}
+        \subsection{A basic launch file}
+        \begin{enumerate}
+            \item Create a package \texttt{intro2launch} which depends on \texttt{turtlesim}.
+            \item Within this package, create a folder called \texttt{launch}.
+            \item Within this folder, create \texttt{firstLaunch.launch}:
+            \begin{minted}[bgcolor=LightGray]{xml}
+    <?xml version="1.0"?>
+    <launch>
+        <node name="turtlesim" pkg="turtlesim" type="turtlesim_node"/>
+        <node name="teleop" pkg="turtlesim" type="turtle_teleop_key"
+         launch-prefix="gnome-terminal -e" />
+    </launch>
+            \end{minted}
+    
+            To spawn a node, the syntax is \mintinline{xml}{<node name=... pkg=... type=... />}.
+            The \texttt{launch-prefix="gnome-terminal --"} option is used to make the node output
+            display in a new terminal.
+            \item There are a few more options you should familiarize yourself with, including 
+            \textbf{required}, \textbf{respawn}, \textbf{ns} and \textbf{output}. You should 
+            also take a look at how to pass arguments. All this can be found at \url{http://wiki.ros.org/roslaunch/XML}.
+            -- have a look at the tag reference. Also look at the relevant chapter of \emph{A Gentle Introduction to ROS}.
+            \item To run this launch file:
+            \begin{minted}[bgcolor=LightGray]{bash}
+    roslaunch intro2launch firstLaunch.launch
+            \end{minted}
+            You may notice that this automatically starts a master if no master has been found.
+            To shut down all nodes started by this, use Ctrl+C.
+        \end{enumerate}
+        \subsection{Including other launch files}
+        \begin{enumerate}
+            \item Now, create \texttt{secondLaunch.launch}.
+            \begin{minted}[bgcolor=LightGray]{xml}
+    <?xml version="1.0"?>
+    <launch>
+        <include file="$(find intro2launch)/launch/firstLaunch.launch"/>
+    </launch>
+            \end{minted}
+            Run this in the same way as before. You can also pass args in the include file. Find out 
+            how by reading the docs and seeing examples.
+        \end{enumerate}
+    \section{Looking ahead}
+        You can now use launch files to launch multiple nodes at once. This section was especially
+        brief because I wish to only give a survey of ROS before spending much more time 
+        on simulation and control. 
+        \\
+        \\
+        Now, we are ready to start creating models of our robots for simulation.
+\end{document}
