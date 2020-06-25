@@ -1,0 +1,49 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}robot} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}turret\PYGZus{}bot\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}link} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}base\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}visual\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}mesh} \PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}package://turret\PYGZus{}bot/meshes/base.stl\PYGZdq{}} \PYG{n+na}{scale=}\PYG{l+s}{\PYGZdq{}1 1 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}material} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}color} \PYG{n+na}{rgba=}\PYG{l+s}{\PYGZdq{}0.8 0 0 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}link} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}slider\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}visual\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}mesh} \PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}package://turret\PYGZus{}bot/meshes/slider.stl\PYGZdq{}} \PYG{n+na}{scale=}\PYG{l+s}{\PYGZdq{}1 1 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}material} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}green\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}color} \PYG{n+na}{rgba=}\PYG{l+s}{\PYGZdq{}0 0.8 0 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}link} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rotor\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}visual\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}mesh} \PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}package://turret\PYGZus{}bot/meshes/rotor.stl\PYGZdq{}} \PYG{n+na}{scale=}\PYG{l+s}{\PYGZdq{}1 1 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}material} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}color} \PYG{n+na}{rgba=}\PYG{l+s}{\PYGZdq{}0 0 0.8 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+      \PYG{n+nt}{\PYGZlt{}/material\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/visual\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/link\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}joint} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}j1\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}prismatic\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}origin} \PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 0 0\PYGZdq{}} \PYG{n+na}{rpy=}\PYG{l+s}{\PYGZdq{}0 0 0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}axis} \PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 1 0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}limit} \PYG{n+na}{lower=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}} \PYG{n+na}{upper=}\PYG{l+s}{\PYGZdq{}1\PYGZdq{}} \PYG{n+na}{effort=}\PYG{l+s}{\PYGZdq{}1000\PYGZdq{}} \PYG{n+na}{velocity=}\PYG{l+s}{\PYGZdq{}50\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}parent} \PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}base\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}child} \PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}slider\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}joint} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}j2\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}revolute\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}origin} \PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 0.05 0.475\PYGZdq{}} \PYG{n+na}{rpy=}\PYG{l+s}{\PYGZdq{}0.0 0.0 0.0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}axis} \PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 0 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}limit} \PYG{n+na}{lower=}\PYG{l+s}{\PYGZdq{}\PYGZhy{}3.141592\PYGZdq{}} \PYG{n+na}{upper=}\PYG{l+s}{\PYGZdq{}3.141592\PYGZdq{}} \PYG{n+na}{effort=}\PYG{l+s}{\PYGZdq{}1000\PYGZdq{}} \PYG{n+na}{velocity=}\PYG{l+s}{\PYGZdq{}50\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}parent} \PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}slider\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}child} \PYG{n+na}{link=}\PYG{l+s}{\PYGZdq{}rotor\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/robot\PYGZgt{}}
+\end{Verbatim}

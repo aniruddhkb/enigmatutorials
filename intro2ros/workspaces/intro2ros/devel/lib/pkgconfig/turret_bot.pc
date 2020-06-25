@@ -1,0 +1,8 @@
+prefix=/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel
+
+Name: turret_bot
+Description: Description of turret_bot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

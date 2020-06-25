@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot name="turret_bot">
+    <link name="base">
+        <visual>
+            <geometry>
+                <mesh filename="package://turret_bot/meshes/base.stl" scale="1 1 1"/>
+            </geometry> 
+            <material name="red">
+                <color rgba="0.8 0 0 1"/>    
+            </material>  
+        </visual>
+    </link>
+    <link name="slider">
+        <visual>
+            <geometry>
+                <mesh filename="package://turret_bot/meshes/slider.stl" scale="1 1 1"/>
+            </geometry>    
+            <material name = "green">
+                <color rgba="0 0.8 0 1"/>    
+            </material>  
+        </visual>
+    </link>
+    <link name="rotor">
+        <visual>
+            <geometry>
+                <mesh filename="package://turret_bot/meshes/rotor.stl" scale="1 1 1"/>
+            </geometry>
+            <material name = "blue">
+                <color rgba="0 0 0.8 1"/>    
+            </material>      
+        </visual>
+    </link>
+    <joint name="j1" type="prismatic">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="0" upper="1" effort="1000" velocity="50"/>
+        <parent link="base"/>
+        <child link="slider"/>
+    </joint>
+    <joint name="j2" type="revolute">
+        <origin xyz="0 0.05 0.475" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.141592" upper="3.141592" effort="1000" velocity="50"/>
+        <parent link="slider"/>
+        <child link="rotor"/>
+    </joint>
+</robot>

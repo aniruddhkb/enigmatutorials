@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install/lib;/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel/lib;/home/akb/Documents/dd_robot/devel/lib;/home/akb/Documents/four_dof_arm/devel/lib;/home/akb/Documents/localROS2/devel/lib;/home/akb/Documents/localROS/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/install/lib;/home/akb/Documents/github/swarm_robotics/devel/lib;/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel/lib;/home/akb/Documents/dd_robot/devel/lib;/home/akb/Documents/four_dof_arm/devel/lib;/home/akb/Documents/localROS2/devel/lib;/home/akb/Documents/localROS/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

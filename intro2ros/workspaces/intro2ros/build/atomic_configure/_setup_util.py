@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel;/home/akb/Documents/dd_robot/devel;/home/akb/Documents/four_dof_arm/devel;/home/akb/Documents/localROS2/devel;/home/akb/Documents/localROS/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/akb/Documents/github/swarm_robotics/devel;/home/akb/Documents/github/enigmatutorials/intro2ros/workspaces/intro2ros/devel;/home/akb/Documents/dd_robot/devel;/home/akb/Documents/four_dof_arm/devel;/home/akb/Documents/localROS2/devel;/home/akb/Documents/localROS/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

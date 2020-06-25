@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}param} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}robot\PYGZus{}description\PYGZdq{}}
+        \PYG{n+na}{textfile =} \PYG{l+s}{\PYGZdq{}\PYGZdl{}(find turret\PYGZus{}bot)/urdf/turret\PYGZus{}bot.urdf\PYGZdq{}} \PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}
+         \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}}
+         \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}publisher\PYGZus{}gui\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}rviz\PYGZdq{}} \PYG{n+na}{required =} \PYG{l+s}{\PYGZdq{}true\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

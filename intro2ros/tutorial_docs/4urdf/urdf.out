@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Notes}{}% 1
+\BOOKMARK [1][-]{section.2}{Designing a robot in Fusion 360}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Getting Fusion 360}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Modelling and exporting}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Making the URDF file}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{A package for the robot}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{The URDF file}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{RViz and the launch file}{}% 8
+\BOOKMARK [1][-]{section.5}{On RPY fixed-frame angle systems}{}% 9
+\BOOKMARK [1][-]{section.6}{Looking ahead}{}% 10
