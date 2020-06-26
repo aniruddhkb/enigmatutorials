@@ -9,494 +9,284 @@
 \definecolor{LightGray}{rgb}{0.85,0.85,0.85}
 \graphicspath{{./}}
 \geometry{a4paper, portrait, margin = 1in}
-\title{ROS Made Easy \\0: Introduction and Installation}
+\title{ROS Made Easy \\4: URDF and RViz}
 \date{\today}
 \author{Aniruddh K Budhgavi \\Enigma, IIIT-B}
 \begin{document}
     \maketitle
-    \section{Important Note}
-    This tutorial was created for \textbf{ROS1 Melodic Morenia}
-    on \textbf{Ubuntu 18.04 Bionic Beaver}, in \textbf{June 2020}.
-    I expect them to become rapidly out of date. It is my hope
-    that Team Enigma will continually maintain and update these tutorials.
-    \\
-    \\
-    This tutorial assumes that you are running Ubuntu, and have at least an
-    elementary grasp of Python 2.7 and C/C++ .
-    \section{Motivation}
-    In any field of software engineering, instead
-    of repeatedly reinventing the wheel, it is better to
-    reuse code. This is accomplished through packages and libraries.
-    This same principle of code reuse is true for robotics.
-    \\
-    \\
-    ROS, or the \textbf{Robot Operating System} provides this
-    functionality. ROS allows you to separate the problem of
-    low-level hardware control from things like motion planning and
-    perception. It provides a standardised mechanism for communication
-    between multiple processes -- both within a system and across a network.
-    It provides tools for robot visualization and simulation
-    and for common tasks like inverse kinematics. ROS can be thought
-    of as an operating system because it provides all the functions
-    that are expected of one. For more details, see \url{http://wiki.ros.org/ROS/Introduction}
-    or the first chapter of \emph{A Gentle Introduction to ROS by Jason M. O Kane}, provided 
-    \href{https://github.com/aniruddhkb/enigmatutorials/blob/master/intro2ros/tutorial_docs/agitr-small.pdf}{here}.
-    \section{Installation}
-        \begin{enumerate}
-            \item First, ensure you have Python 2.7 installed.
-            \item Follow the installation instructions at \url{http://wiki.ros.org/melodic/Installation/Ubuntu}
-            and do a \textbf{full installation}. This is very important, because it provides 
-            many add-ons, including the \textbf{Gazebo simulator}. Getting them 
-            later on and integrating them with ROS may be difficult.
-            \item Follow the complete installation process from beginning to end. Do not skip any steps.
-            \item Close all active terminals and open a fresh terminal.
-            \item Run the following command to ensure that all is well:
-            \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ export | grep ROS
-            \end{minted}
-            which should display a bunch of environment variables, like this:
-            \begin{minted}[bgcolor=LightGray]{bash}
-    declare -x CMAKE_PREFIX_PATH="/home/akb/Documents/dd_robot/devel
-        :/home/akb/Documents/four_dof_arm/devel
-        :/home/akb/Documents/localROS2/devel
-        :/home/akb/Documents/localROS/devel
-        :/opt/ros/melodic"
-    declare -x GAZEBO_MODEL_PATH="/home/akb/Documents/localROS2/src
-        :/usr/share/gazebo-9/models
-        :/home/akb/Documents/four_dof_arm/src
-        :/home/akb/Documents/dd_robot/src"
-    declare -x LD_LIBRARY_PATH="/home/akb/Documents/dd_robot/devel/lib
-        :/home/akb/Documents/four_dof_arm/devel/lib
-        :/home/akb/Documents/localROS2/devel/lib
-        :/home/akb/Documents/localROS/devel/lib
-        :/opt/ros/melodic/lib"
-    declare -x PKG_CONFIG_PATH="/home/akb/Documents/dd_robot/devel/lib/pkgconfig
-        :/home/akb/Documents/four_dof_arm/devel/lib/pkgconfig
-        :/home/akb/Documents/localROS2/devel/lib/pkgconfig
-        :/home/akb/Documents/localROS/devel/lib/pkgconfig
-        :/opt/ros/melodic/lib/pkgconfig"
-    declare -x ROSLISP_PACKAGE_DIRECTORIES="/home/akb/Documents/dd_robot/devel
-    /share/common-lisp
-        :/home/akb/Documents/four_dof_arm/devel/share/common-lisp
-        :/home/akb/Documents/localROS2/devel/share/common-lisp
-        :/home/akb/Documents/localROS/devel/share/common-lisp"
-    declare -x ROS_DISTRO="melodic"
-    declare -x ROS_ETC_DIR="/opt/ros/melodic/etc/ros"
-    declare -x ROS_MASTER_URI="http://localhost:11311"
-    declare -x ROS_PACKAGE_PATH="/home/akb/Documents/dd_robot/src
-        :/home/akb/Documents/four_dof_arm/src
-        :/home/akb/Documents/localROS2/src
-        :/home/akb/Documents/localROS/src
-        :/opt/ros/melodic/share"
-    declare -x ROS_PYTHON_VERSION="2"
-    declare -x ROS_ROOT="/opt/ros/melodic/share/ros"
-    declare -x ROS_VERSION="1"
-            \end{minted}
-            \item Also, try:
-            \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ roscore
-            \end{minted}
-        \end{enumerate}
-    \section{Core concepts}
-        \subsection{Packages}
+    \section{Notes}
+    \begin{enumerate}
+        \item This tutorial was created for \textbf{ROS1 Melodic Morenia}
+        on \textbf{Ubuntu 18.04 Bionic Beaver}, in \textbf{June 2020}.
+        I expect them to become rapidly out of date. It is my hope
+        that Team Enigma will continually maintain and update these tutorials.
+        \item This tutorial assumes that you are running Ubuntu, and have at least an
+        elementary grasp of Python 2.7 and C/C++ .
+        \item All the code and the models for this tutorial are available at 
+        \url{https://github.com/aniruddhkb/enigmatutorials}.
+        \item The aim of this tutorial is to make you \emph{functional} in ROS, not to make you a master. For 
+        that, look elsewhere.
+        \item Ensure that you have RViz, TF2, the robot\_state\_publisher package and the joint\_state\_publisher
+        and joint\_state\_publisher\_gui packages installed before proceeding further. You can install them 
+        using the relevant \texttt{apt-get} commands. See \url{http://wiki.ros.org/rviz/UserGuide},
+        \href{http://wiki.ros.org/tf2/Tutorials/Introduction%20to%20tf2}{this} and
+        \href{https://answers.ros.org/question/346665/how-to-install-joint_state_publisher_gui-in-melodic-version-of-ros/}{this}.
+    \end{enumerate}
+    \section{Designing a robot in Fusion 360}
+        \subsection{Getting Fusion 360}
             \begin{enumerate}
-                \item All ROS software is organized into packages. A package consists of:
+                \item Fusion 360 is a 3D design and modelling package provided by Autodesk.
+                Unfortunately, ROS/Gazebo work best in Linux while Fusion 360 is only 
+                available for Windows/Mac, so you'll have to design in Windows/Mac and 
+                simulate in Linux.
+                \item If you are a student or educator, you can get Fusion 360 for free at
+                \href{https://www.autodesk.com/products/fusion-360/students-teachers-educators}{this} link.
+
+                \item You can learn how to use Fusion 360 through the many Youtube tutorials on
+                the topic. Mine is \href{https://youtu.be/dnE5-s0SR-M?t=798}{here}. This is 
+                just one hour long, but covers many of the tools you will need to design models
+                effectively in Fusion. 
+            \end{enumerate}
+        \newpage
+        \subsection{Modelling and exporting}
+            \begin{enumerate}
+                \item First, change the model units from millimeters to meters. This is important 
+                because we will be exporting the model files as .STL files. The thing about STL 
+                files is that they are completely unitless in nature. It is up to the software to 
+                interpret the STL appropriately. Therefore, if the units of the source and destination
+                software don't match, we will have an anomaly in the size of the model in the destination 
+                software. To do this:
                 \begin{enumerate}
-                    \item A folder having the same name as the package name. The folder \textbf{is} the package.
-                    \item A manifest file, \texttt{package.xml} which provides information about the package. Most importantly, it lists the packages
-                    that this package depends on.
-                    \item A CMake configuration file, \texttt{CMakeLists.txt} which is used to compile the package.
-                    \item The source code of the package executables.
-                    \item Custom messages and services. 
+                    \item See the document settings option.
+                    \begin{figure}[H]
+                        \center
+                        \includegraphics[width = 1.1\textwidth]{image_1.png}
+                    \end{figure}
+                    \item See the units option.
+                    \begin{figure}[H]
+                        \center
+                        \includegraphics[width = 0.3\textwidth]{image_2.png}
+                    \end{figure}
+                    \newpage
+                    \item Change the active units from mm to m.
+                    \begin{figure}[H]
+                        \center
+                        \includegraphics[width = 0.3\textwidth]{image_3.PNG}
+                    \end{figure}
+                \end{enumerate}
+                \item Now, you can freely design the model. Segment the model into multiple
+                independent bodies (the links of the robot) and leave small gaps between the bodies. Your model
+                could look something like this:
+                \begin{figure}[H]
+                    \center
+                    \includegraphics[width = 0.8\textwidth]{image_4.PNG}
+                \end{figure}
+                \item Convert each body into a component and save it in its own file (The right-click context menu 
+                on an entry in the left-side browser pane should do the trick).
+                \item Now, you must learn to think in terms of joint frames vs global frames.
+                \item Every joint has a parent link (body) and a child link. Every joint has a parent joint.
+                \item The reference frame for the joint is the parent link's joint frame. The position 
+                and orientation of this joint must be represented with respect to this frame.
+                \item The reference frame for a child link is the joint of which it is a child.
+                \item Therefore, we must :
+                \begin{enumerate}
+                    \item Note down the positions and orientations of the joints \emph{with respect to their parent joints}.
+                    \item In the files where we have the individual components separately, \emph{align} the body such
+                    that the position with respect to the origin is the same as the position of the link with 
+                    respect to its parent joint.
+                \end{enumerate}
+                \item Let me give you an example. Here, the revolute joint at the top is at $(0, 0.05, 0.475)$.
+                The child of this is that bar which is supposed to swing about the Z axis. Now, with respect to
+                its parent joint, the bar should be at $(0, 0, 0.005)$.
+                \item Make these modifications and save the STL files somwhere in the cloud, so that you 
+                can view the STL files in Linux.
+                \item Here's the final model files you should export:
+                \begin{figure}[H]
+                    \center
+                    \includegraphics[width = 0.6\textwidth]{image_5.PNG}
+                    \caption{base.stl}
+                \end{figure}
+                \begin{figure}[H]
+                    \center
+                    \includegraphics[width = 0.6\textwidth]{image_6.PNG}
+                    \caption{slider.stl}
+                \end{figure}
+                \begin{figure}[H]
+                    \center
+                    \includegraphics[width = 0.6\textwidth]{image_7.PNG}
+                    \caption{rotor.stl}
+                \end{figure}
+            \end{enumerate}
+    \section{Making the URDF file}
+        \subsection{A package for the robot}
+            \begin{enumerate}
+                \item Create a package \texttt{turret\_bot} which depends on \texttt{urdf},
+                \texttt{rviz} and \texttt{tf2}. You can choose to create a new workspace for this.
+                For the sake of simplicity, I have not done this in the Github repo.
+                \item Create directories \texttt{urdf}, \texttt{meshes}, \texttt{launch},
+                 \texttt{config} and \texttt{scripts} within the package directory.
+            \end{enumerate}
+            \newpage
+        \subsection{The URDF file}
+            \begin{enumerate}
+                \item The \textbf{Unified Robot Description Format} is an XML-based format for 
+                describing a robot model. Here, the links are considered to be nodes of a tree,
+                with a clear parent-child relationship between links (this is a disadvantage for closed-
+                chain robots).  
+                \item Create \texttt{turret\_bot/urdf/turret\_bot.urdf}. The file:
+                \begin{minted}[bgcolor=LightGray]{xml}
+<?xml version="1.0"?>
+<robot name="turret_bot">
+  <link name="base">
+    <visual>
+      <geometry>
+        <mesh filename="package://turret_bot/meshes/base.stl" scale="1 1 1"/>
+      </geometry> 
+      <material name="red">
+        <color rgba="0.8 0 0 1"/>    
+      </material>  
+    </visual>
+  </link>
+  <link name="slider">
+    <visual>
+      <geometry>
+        <mesh filename="package://turret_bot/meshes/slider.stl" scale="1 1 1"/>
+      </geometry>    
+      <material name = "green">
+        <color rgba="0 0.8 0 1"/>    
+      </material>  
+    </visual>
+  </link>
+  <link name="rotor">
+    <visual>
+      <geometry>
+        <mesh filename="package://turret_bot/meshes/rotor.stl" scale="1 1 1"/>
+      </geometry>
+      <material name = "blue">
+        <color rgba="0 0 0.8 1"/>    
+      </material>      
+    </visual>
+  </link>
+  <joint name="j1" type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="0" upper="1" effort="1000" velocity="50"/>
+    <parent link="base"/>
+    <child link="slider"/>
+  </joint>
+  <joint name="j2" type="revolute">
+    <origin xyz="0 0.05 0.475" rpy="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.141592" upper="3.141592" effort="1000" velocity="50"/>
+    <parent link="slider"/>
+    <child link="rotor"/>
+  </joint>
+</robot>                    
+                \end{minted}
+                \newpage
+                Breaking it down:
+                \begin{enumerate}
+                    \item \mintinline{xml}{<robot name="turret_bot">} -- all your links and joints 
+                    should be between the \texttt{robot} tags.
+                    \item \mintinline{xml}{<link name="base">} -- describes a link. Since 
+                    we will be referring to links later on, all links should be 
+                    assigned a unique name.
+                    \item \mintinline{xml}{<visual>} -- defines the way 
+                    the model looks. The \texttt{visual} properties are as opposed to 
+                    \texttt{collision} or \texttt{inertial} properties of the robot.
+                    This tag does \textbf{NOT} define how the link behaves when 
+                    in contact with other links, nor does it define the mechanical 
+                    properties like mass or inertia.
+                    \item \mintinline{xml}{<geometry>} -- put all information about visual 
+                    link geometry between these tags. We will reuse \texttt{geometry} when 
+                    defining the collision properties later on. The geometry need not 
+                    be a .STL mesh file -- it can be one of many basic shapes too. For more information, 
+                    see \url{http://wiki.ros.org/urdf/Tutorials} for more.
+                    \item \mintinline{xml}{<mesh filename= ... scale="1 1 1"/>} -- to import a .STL or .DAE file.
+                    \item \mintinline{xml}{<material name= ...>} -- to specify color, texture etc.
+                    \item \mintinline{xml}{<color rgba="0.8 0 0 1"/>} -- four floats between 0 and 1 to 
+                    specify red, green, blue, and opacity.
+                    \item \mintinline{xml}{<joint name= ... type= ...>} -- give every joint a unique name.
+                    The type can be one of six types as mentioned at \url{http://wiki.ros.org/urdf/XML/joint}.
+                    \item \mintinline{xml}{<origin xyz= ... rpy= ... />} specifies the position and orientation
+                    of the joint with respect to the parent joint (unless you have an \texttt{origin} tag in the parent link
+                    -- in which case it may be more complicated. Experiment and see.). The roll-pitch-yaw system is described
+                    at the end of this document.
+                    \item \mintinline{xml}{<axis xyz= .../>} -- specify the direction of the 
+                    joint axis, with respect to its own frame.
+                    \item \mintinline{xml}{<limit lower=... upper=... effort=... velocity=.../>} -- to specify the 
+                    limits of the joint. \texttt{lower} and \texttt{upper} specify the 
+                    position limits. \textbf{Note: Keep the limits non-overlapping i.e  $|upper - lower| < 2\pi$}. Not doing 
+                    this introduces a catastrophic bug in \texttt{gazebo\_ros\_control}'s position interfaces later on. \texttt{effort} 
+                    specifies the maximum force/torque the joint can exert. \texttt{velocity} specifies the maximum
+                    linear/angular velocity that the joint can actuate at. All these quantities are in SI units.\textbf{The limit tag is 
+                    compulsory for revolute and prismatic joints}.
+                    \item \mintinline{xml}{<parent link=.../>} and \mintinline{xml}{<child link=.../>} -- to specify
+                    which links are joined by this joint. Note that a link can only have one 
+                    parent link. This limits us to open-chain robots -- closed-chain robots are 
+                    not possible in the URDF file format.
                 \end{enumerate}
 
-                \item Example packages are \texttt{std\_msgs}, \texttt{turtlesim}, \texttt{gazebo\_ros} and \texttt{rviz}.
-                \item Use the \texttt{rospack} command to view information about packages. As a start, try:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rospack list-names
-                \end{minted}
-                which should provide you with a list of the currently installed ROS packages.
-                \item Also try:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rospack find turtlesim
-                \end{minted}
-                which should give you the path to the \texttt{turtlesim} package, \texttt{/opt/ros/melodic/share/turtlesim}.
-                \item To know more about rospack, try:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rospack help
-                \end{minted}
-                \item To see the contents of a package, use \texttt{rosls <package-name>}:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosls turtlesim
-                \end{minted}
-                Output:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    cmake  images  msg  package.xml  srv
-                \end{minted}
-                \item To go to a package directory, use \texttt{roscd <package-name>}:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ roscd turtlesim
-                \end{minted}
-                \item We will later see how to create and build our own packages. For more information, see \url{http://wiki.ros.org/Packages}.
             \end{enumerate}
-        \subsection{Nodes}
+    \section{RViz and the launch file}
+        \begin{enumerate}
+            \item Create \texttt{urdf\_rviz.launch} in the \texttt{launch} folder. The file:
+            \begin{minted}[bgcolor=LightGray]{xml}
+<?xml version="1.0"?>
+<launch>
+    <param name = "robot_description" 
+        textfile = "$(find turret_bot)/urdf/turret_bot.urdf" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher"
+         type="robot_state_publisher"/>
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui"
+         type="joint_state_publisher_gui"/>
+    <node name="rviz" pkg="rviz" type="rviz" required = "true"/>
+</launch>
+            \end{minted}
             \begin{enumerate}
-                \item A running instance of a ROS process is a node. The phrase "running instance" is key --
-                an executable file sitting idle on your hard disk is \textbf{not} a node.
-                \item A node can:
-                \begin{itemize}
-                    \item Compute something, just like any regular C++ or Python program.
-                    \item Communicate with other nodes, or with the running instance of ROS.
-                \end{itemize}
-                \item There can be multiple nodes running on the same system, as well as multiple nodes across different systems. The same executable 
-                could be used again and again to create many running copies of the same node (but with different node names -- node names are unique for a particular ROS instance).
-                \item The code for a node can be written in any language that supports the ROS client library, though official support is right 
-                now limited to C++ and Python.
-                \item Nodes can communicate through \emph{messages}, \emph{services} and the \emph{parameter server}.
-                \item For more information, see \url{http://wiki.ros.org/Nodes}
+                \item \texttt{robot\_description} is loaded to the parameter server. This is a common step in ROS.
+                \item \texttt{robot\_state\_publisher} publishes the reference frame information to \texttt{tf2}, which 
+                is the backend for RViz.
+                \item \texttt{joint\_state\_publisher\_gui} gives us a slider-based system to control the joint angles.
+                \item \texttt{rviz} -- RViz is a robot visualization utility provided along with ROS. It can be used to
+                visualize the robot's geometry and to visualize the robot's sensor data in real-time.
             \end{enumerate}
-        \subsection{Messages and topics}
-            \begin{enumerate}
-                \item The primary method of communication between ROS nodes is through messages on topics.
-                \item Communication through topics is many-to-many in nature. Nodes can \emph{subscribe} to (receive messages from) a topic,
-                and \emph{publish} to (send messages to) a topic. When a message is published to a topic, all the nodes that have subscribed to that 
-                topic receive that message.
-                \item Topics, then, are like message boards or forums. It is not known which node published which message (unless the message itself contains this).
-                \item Every topic has a message type associated with it. Only messages of that type can be published to that topic. You can think of message type as being analogous to data type.
-                The messages resemble structs in C.
-                \newpage
-                \item To view the message types available, use the command:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosmsg list
-                \end{minted}
-                \item To view the format of a message, use \texttt{rosmsg show <msg-type>}. For example,
-                \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosmsg show geometry_msgs/Twist
-                \end{minted}
-                Output:
-                \begin{minted}[bgcolor=LightGray]{bash}
-    geometry_msgs/Vector3 linear
-        float64 x
-        float64 y
-        float64 z
-    geometry_msgs/Vector3 angular
-        float64 x
-        float64 y
-        float64 z
-                \end{minted}
-                \item An important point is that though the communication through topics is many-to-many,
-                the messages themselves are directly transmitted between the publisher and subscribers
-                 -- there is no "server" that acts as an intermediary.
-                
-                \item To know more about \texttt{rosmsg}, try \texttt{rosmsg help}. 
-                For more information, see \url{http://wiki.ros.org/Messages} and \url{http://wiki.ros.org/Topics}.
-            \end{enumerate}
-        \subsection{Services}
-            \begin{enumerate}
-                \item Services provide one-to-one communication between nodes.
-                \item A ROS node (service provider) can provide a service which can be \emph{called}
-                by another node (client).
-                \item When a service is called, a request message is sent from the client to the service provider,
-                which can reply with a response message. These request/response messages are different from topic/messages. 
-                \item For more information, see \url{http://wiki.ros.org/Services}.
-            \end{enumerate}
-        \subsection{The parameter server}
-            \begin{enumerate}
-                \item The parameter server is a place where globally-accessible data can be stored.
-                \item Every instance of ROS has one parameter server, and every node on that instance can 
-                get and set parameters on that server.
-                \item These parameters are typically initialized when a ROS instance is started.
-                \item For more information, see \url{http://wiki.ros.org/Parameter%20Server}.
-            \end{enumerate}
-        \subsection{The master}
-            \begin{enumerate}
-                \item The ROS master is a program which must be started before any nodes are activated.
-                \item The ROS master provides many functions, including:
-                \begin{itemize}
-                    \item Naming and registering nodes.
-                    \item Establishing publisher-subscriber connections and tracking topics.
-                    \item The parameter server.
-                    \item Tracking services.
-                    \item Debugging tools.
-                \end{itemize}
-                \item For more information, see \url{http://wiki.ros.org/Master}.
-            \end{enumerate}
-    \newpage
-    \section{Turtlesim}
-    \begin{enumerate}
-        \item Run the following three commands, \textbf{each in a separate terminal, in the same order}:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ roscore
-    :~$ rosrun turtlesim turtlesim_node
-    :~$ rosrun turtlesim turtle_teleop_key 
-        \end{minted}
-        Output from first terminal should be something like:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    ... logging to /home/akb/.ros/log/9ad6f8d6-afcd-11ea-9d13-907841080e03
-    /roslaunch-akb-G3-3579-16205.log
-    Checking log directory for disk usage. This may take a while.
-    Press Ctrl-C to interrupt
-    Done checking log file disk usage. Usage is <1GB.
-    
-    started roslaunch server http://akb-G3-3579:32923/
-    ros_comm version 1.14.5
-    
-    
-    SUMMARY
-    ========
-    
-    PARAMETERS
-        * /rosdistro: melodic
-        * /rosversion: 1.14.5
-    
-    NODES
-    
-    auto-starting new master
-    process[master]: started with pid [16353]
-    ROS_MASTER_URI=http://akb-G3-3579:11311/
-    
-    setting /run_id to 9ad6f8d6-afcd-11ea-9d13-907841080e03
-    process[rosout-1]: started with pid [16364]
-    started core service [/rosout]
-        \end{minted}
-
-        Output from the second terminal:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    [ INFO] [1592310832.800133368]: Starting turtlesim with node name /turtlesim
-    [ INFO] [1592310832.814790457]: Spawning turtle [turtle1] at x=[5.544445],
-     y=[5.544445], theta=[0.000000]
-        \end{minted}
-        A window like this should open up:
-        \begin{figure}[H]
-                    \center
-                    \includegraphics[width = 0.3\textwidth]{turtle_screenshot.png}
-        \end{figure}
+            \item Launch the launch file. You should see the following image.
+            \begin{figure}[H]
+                \center
+                \includegraphics[width = \textwidth]{image_8.png}
+            \end{figure}
+            \newpage
+            \item Double click \emph{map} which is the field for \emph{Fixed frame} and change it to \texttt{base}.
+            \item Add -- Rviz -- TF and Add -- Rviz -- RobotModel. You should see:
+            \begin{figure}[H]
+                \center
+                \includegraphics[width = \textwidth]{image_10.png}
+            \end{figure}
+            \item You should also see this:
+            \begin{figure}[H]
+                \center
+                \includegraphics[width = 0.2\textwidth]{image_9.png}
+            \end{figure}
+            You can control the sliders to modify the robot positions. Notice how the reference frames 
+            move along with the body.
+        \end{enumerate}
         \newpage
-        Output from the third terminal:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    Reading from keyboard
-    ---------------------------
-    Use arrow keys to move the turtle. 'q' to quit.          
-        \end{minted}
-        \item Keep the third terminal window and the turtlesim window open. With the third terminal
-        window active, you should be able to control the turtle using the arrow keys. You should 
-        see the turtle move and leave a trail behind it. Like this:
-
-        \begin{figure}[H]
-            \center
-            \includegraphics[width = 0.3\textwidth]{turtle_screenshot2.png}
-        \end{figure}
-
-        \item Let's now analyze what we did. First, we started a ROS master using the \texttt{roscore} 
-        command. Next, we started two nodes, each using the \texttt{rosrun} command. The format for rosrun is:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosrun <pkg> <type>
-        \end{minted}
-        \item There's nothing magical about rosrun. It is equivalent to going to the folder of turtlesim,
-        finding the right executable, and running it directly, like a \texttt{./a.out} from C.
-        \item To view the currently running nodes, in a new terminal, run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosnode list
-        \end{minted}
-        Output:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    /rosout
-    /teleop_turtle
-    /turtlesim
-        \end{minted}
-        So we have three nodes: \texttt{/rosout}, which is like STDOUT but for ROS; \texttt{/turtlesim}, which is the turtle window;
-         and \texttt{/teleop\_turtle}, which accepts the arrow key inputs.
-        \item There must be some way by which \texttt{/teleop\_turtle} and \texttt{/turtlesim} are communicating.
-        Let's investigate this. Run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosnode info /turtlesim
-        \end{minted}
-        \newpage
-        Output (by the way, use the TAB key for autocomplete):
-        \begin{minted}[bgcolor=LightGray]{bash}
-    --------------------------------------------------------------------------------
-    Node [/turtlesim]
-    Publications: 
-        * /rosout [rosgraph_msgs/Log]
-        * /turtle1/color_sensor [turtlesim/Color]
-        * /turtle1/pose [turtlesim/Pose]
-    
-    Subscriptions: 
-        * /turtle1/cmd_vel [geometry_msgs/Twist]
-    
-    Services: 
-        * /clear
-        * /kill
-        * /reset
-        * /spawn
-        * /turtle1/set_pen
-        * /turtle1/teleport_absolute
-        * /turtle1/teleport_relative
-        * /turtlesim/get_loggers
-        * /turtlesim/set_logger_level
-    
-    
-    contacting node http://akb-G3-3579:36561/ ...
-    Pid: 21017
-    Connections:
-        * topic: /rosout
-        * to: /rosout
-        * direction: outbound (54721 - 127.0.0.1:38478) [53]
-        * transport: TCPROS
-        * topic: /turtle1/cmd_vel
-        * to: /teleop_turtle (http://akb-G3-3579:40119/)
-        * direction: inbound (33248 - akb-G3-3579:53883) [56]
-        * transport: TCPROS
-    
-        \end{minted}
-        And run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rosnode info /teleop_turtle
-        \end{minted}
-        Output:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    --------------------------------------------------------------------------------
-    Node [/teleop_turtle]
-    Publications: 
-        * /rosout [rosgraph_msgs/Log]
-        * /turtle1/cmd_vel [geometry_msgs/Twist]
-    
-    Subscriptions: None
-    
-    Services: 
-        * /teleop_turtle/get_loggers
-        * /teleop_turtle/set_logger_level
-    
-    
-    contacting node http://akb-G3-3579:40119/ ...
-    Pid: 21190
-    Connections:
-        * topic: /rosout
-        * to: /rosout
-        * direction: outbound (53883 - 127.0.0.1:33246) [22]
-        * transport: TCPROS
-        * topic: /turtle1/cmd_vel
-        * to: /turtlesim
-        * direction: outbound (53883 - 127.0.0.1:33248) [20]
-        * transport: TCPROS
-        \end{minted}
-        You can ignore most of the output. Pay attention to the topics being published
-        and subscribed to. Specifically, observe that \texttt{/teleop\_turtle} publishes 
-        to \texttt{/turtle1/cmd\_vel} while \texttt{/turtlesim} is subscribed to it. This could be 
-        the mechanism by which the instructions are being communicated.
-
-        \item Let's dig even deeper. Run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rostopic list    
-        \end{minted}
-        Output:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    /rosout
-    /rosout_agg
-    /turtle1/cmd_vel
-    /turtle1/color_sensor
-    /turtle1/pose
-        \end{minted}
-        Which is a list of the currently active topics. Now run (use TAB!):
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rostopic echo /turtle1/cmd_vel
-        \end{minted}
-        Do this in a separate window, and observe what happens when you command the turtle using
-        \texttt{/teleop\_turtle}. Output:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    
-    linear: 
-    x: 2.0
-    y: 0.0
-    z: 0.0
-    angular: 
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    ---
-    linear: 
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    angular: 
-    x: 0.0
-    y: 0.0
-    z: 2.0
-    ---
-    ...
-        \end{minted}
-        It would seem that this is indeed the way the commands are transmitted between the nodes.
-        
-        \item Another utility exists to observe the relation between multiple nodes. Try:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rqt_graph
-        \end{minted}
-        Initially, the graph is like this:
-        \begin{figure}[H]
-            \center
-            \includegraphics[width = 0.75\textwidth]{graph1.png}
-        \end{figure}
-        You can see the relation between \texttt{/teleop\_turtle} and \texttt{/turtlesim}.
-        The other node is due to the \texttt{rostopic echo /turtle1/cmd\_vel} command.
-        Now, uncheck all the 'hide' options, and choose "Nodes/Topics(all)". The graph looks like:
-        \begin{figure}[H]
-            \center
-            \includegraphics[width = 0.9\textwidth]{graph2.png}
-        \end{figure}
-        \texttt{rqt\_graph} is a valuable tool for visualizing and debugging.
-        
-        \item A key point: Publishers don't know who the subscribers are, and subscribers don't know who the 
-        publishers are.
-
-        \item Now, let's look at the message format used in \texttt{/turtle1/cmd\_vel}. Run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ rostopic type /turtle1/cmd_vel | rosmsg show
-        \end{minted}
-        The \texttt{|} operator takes the output of the preceding command and gives it as an argument 
-        to the next command. Output:
-        \begin{minted}[bgcolor=LightGray]{bash}
-    geometry_msgs/Vector3 linear
-    float64 x
-    float64 y
-    float64 z
-    geometry_msgs/Vector3 angular
-    float64 x
-    float64 y
-    float64 z
-        \end{minted}
-        This tells us that the message for \texttt{/turtle1/cmd\_vel} is composed of two \texttt{geometry\_msgs/Vector3},
-        one of which is \texttt{linear} and the other \texttt{angular}. The \texttt{geometry\_msgs/Vector3} messages are themselves composed of
-        three \texttt{float64}s -- \texttt{x}, \texttt{y} and \texttt{z}.
-        \newpage
-        \item It is possible to publish messages from the command line.
-         With the three terminals from the beginning still running, open a fourth terminal and run:
-        \begin{minted}[bgcolor=LightGray]{bash}
-   :~$ rostopic pub -r 1 /turtle1/cmd_vel geometry_msgs/Twist '[2,0,0]' '[0,0,1]'
-        \end{minted}
-        And watch the turtle execute a circle.
-        \item Let's break down that last command. \texttt{rostopic pub} -- we wish to publish; \texttt{-r 1} -- at a fixed rate of 1 Hz;
-         \texttt{/turtle1/cmd\_vel} -- topic; \texttt{geometry\_msgs/Twist} -- message type; \texttt{'[2, 0, 0]' '[0, 0, 1]'} -- message contents.
-        \item \texttt{/turtlesim} only uses \texttt{x} from \texttt{linear} and \texttt{z} from \texttt{angular}. It ignores the other two values.
-        
-        \item As a final demonstration, close all terminals, reopen five new terminals and run (one in each terminal):
-        \begin{minted}[bgcolor=LightGray]{bash}
-    :~$ roscore 
-    :~$ rosrun turtlesim turtlesim_node __name:=A
-    :~$ rosrun turtlesim turtlesim_node __name:=B
-    :~$ rosrun turtlesim turtle_teleop_key __name:=C
-    :~$ rosrun turtlesim turtle_teleop_key __name:=D
-        \end{minted}
-        What do you think will happen? Will \texttt{C} control \texttt{A} and \texttt{D}, \texttt{B}? Or vice-versa? Experiment and check.
-        \item With the other terminals still open, run \texttt{rqt\_graph} and see the result.
-        \begin{figure}[H]
-            \center
-            \includegraphics[width = 0.75\textwidth]{graph3.png}
-        \end{figure}
-        \item This should serve as an important lesson: Nodes are loosely coupled in nature. They are as independent as possible.
-        \item Lastly, try the \texttt{roswtf} command.
-        \item This section was adapted from \url{http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes}, \url{http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics}
-        and \emph{A Gentle Introduction to ROS, Chapter Two}
-    \end{enumerate}
+    \section{On RPY fixed-frame angle systems}
+        \begin{enumerate}
+            \item In the URDF, we saw an option \texttt{rpy = } in the attributes of \texttt{origin}.
+            While we didn't have to use it, this feature is for specifying the orientation of the frame/link/joint.
+            How it works is like this:
+            \begin{enumerate}
+                \item Start with the orientation of the parent frame.
+                \item Rotate about the center of your new frame about an axis parallel to the parent's X axis.
+                \item Rotate about the center of your new frame about an axis parallel to the parent's Y axis.
+                \item Rotate about the center of your new frame about an axis parallel to the parent's Z axis.
+            \end{enumerate}
+            Be sure to follow the same order. See \url{http://wiki.ros.org/urdf/XML/joint#Attributes} for more 
+            information.
+        \end{enumerate}
     \section{Looking ahead}
-    Next time, we will be creating our first ROS package and writing our first ROS nodes. 
+    You have written a basic robot URDF file and can visualize the same in RViz. Next time, we will 
+    start simulating this same robot in Gazebo.
 \end{document}

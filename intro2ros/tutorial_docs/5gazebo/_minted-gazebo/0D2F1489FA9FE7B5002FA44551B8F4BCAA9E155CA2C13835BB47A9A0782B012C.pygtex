@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{Opened} \PYG{n}{mesh} \PYG{n}{base}\PYG{o}{.}\PYG{n}{stl} \PYG{o+ow}{in} \PYG{l+m+mi}{127} \PYG{n}{msec}
+    \PYG{n}{All} \PYG{n}{files} \PYG{n}{opened} \PYG{o+ow}{in} \PYG{l+m+mi}{130} \PYG{n}{msec}
+    \PYG{n}{Mesh} \PYG{n}{Bounding} \PYG{n}{Box} \PYG{n}{Size} \PYG{l+m+mf}{0.340000} \PYG{l+m+mf}{1.000000} \PYG{l+m+mf}{0.170000}
+    \PYG{n}{Mesh} \PYG{n}{Bounding} \PYG{n}{Box} \PYG{n}{Diag} \PYG{l+m+mf}{1.069813}
+    \PYG{n}{Mesh} \PYG{n}{Bounding} \PYG{n}{Box} \PYG{n+nb}{min} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.170000} \PYG{l+m+mf}{0.000000} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.020000}
+    \PYG{n}{Mesh} \PYG{n}{Bounding} \PYG{n}{Box} \PYG{n+nb}{max} \PYG{l+m+mf}{0.170000} \PYG{l+m+mf}{1.000000} \PYG{l+m+mf}{0.150000}
+    \PYG{n}{Mesh} \PYG{n}{Surface} \PYG{n}{Area} \PYG{o+ow}{is} \PYG{l+m+mf}{1.345600}
+    \PYG{n}{Mesh} \PYG{n}{Total} \PYG{n}{Len} \PYG{n}{of} \PYG{l+m+mi}{42} \PYG{n}{Edges} \PYG{o+ow}{is} \PYG{l+m+mf}{20.151415} \PYG{n}{Avg} \PYG{n}{Len} \PYG{l+m+mf}{0.479796}
+    \PYG{n}{Thin} \PYG{n}{shell} \PYG{p}{(}\PYG{n}{faces}\PYG{p}{)} \PYG{n}{barycenter}\PYG{p}{:} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.500000} \PYG{l+m+mf}{0.033118}
+    \PYG{n}{Vertices} \PYG{n}{barycenter} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.500000} \PYG{l+m+mf}{0.070000}
+    \PYG{n}{Mesh} \PYG{n}{Volume} \PYG{o+ow}{is} \PYG{l+m+mf}{0.012800}
+    \PYG{n}{Center} \PYG{n}{of} \PYG{n}{Mass} \PYG{o+ow}{is} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.500000} \PYG{l+m+mf}{0.029844}
+    \PYG{n}{Inertia} \PYG{n}{Tensor} \PYG{o+ow}{is} \PYG{p}{:}
+    \PYG{o}{|} \PYG{l+m+mf}{0.001101} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.000254} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.001286} \PYG{o}{|}
+    \PYG{n}{Principal} \PYG{n}{axes} \PYG{n}{are} \PYG{p}{:}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{1.000000} \PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{1.000000} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{1.000000} \PYG{o}{|}
+    \PYG{n}{axis} \PYG{n}{momenta} \PYG{n}{are} \PYG{p}{:}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000254} \PYG{l+m+mf}{0.001101} \PYG{l+m+mf}{0.001286} \PYG{o}{|}
+    \PYG{n}{Applied} \PYG{n+nb}{filter} \PYG{n}{Compute} \PYG{n}{Geometric} \PYG{n}{Measures} \PYG{o+ow}{in} \PYG{l+m+mi}{42} \PYG{n}{msec}
+\end{Verbatim}

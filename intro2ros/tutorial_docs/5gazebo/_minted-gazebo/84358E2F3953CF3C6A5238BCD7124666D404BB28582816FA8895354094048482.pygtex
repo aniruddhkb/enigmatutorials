@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nt}{\PYGZlt{}inertial\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}origin} \PYG{n+na}{xyz=}\PYG{l+s}{\PYGZdq{}0 0.5 0\PYGZdq{}} \PYG{n+na}{rpy=}\PYG{l+s}{\PYGZdq{}0 0 0\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}mass} \PYG{n+na}{value=}\PYG{l+s}{\PYGZdq{}16\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}inertia} \PYG{n+na}{ixx=}\PYG{l+s}{\PYGZdq{}1.376\PYGZdq{}} \PYG{n+na}{ixy=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}} \PYG{n+na}{ixz=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}
+                 \PYG{n+na}{iyy=}\PYG{l+s}{\PYGZdq{}0.317\PYGZdq{}} \PYG{n+na}{iyz=}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}
+                 \PYG{n+na}{izz=}\PYG{l+s}{\PYGZdq{}1.607\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/inertial\PYGZgt{}}
+\end{Verbatim}

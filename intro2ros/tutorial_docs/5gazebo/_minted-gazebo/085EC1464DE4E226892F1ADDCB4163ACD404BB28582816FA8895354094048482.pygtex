@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}collision\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}geometry\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}mesh} \PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}package://turret\PYGZus{}bot/meshes/base.stl\PYGZdq{}} \PYG{n+na}{scale=}\PYG{l+s}{\PYGZdq{}1 1 1\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/geometry\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/collision\PYGZgt{}}
+\end{Verbatim}

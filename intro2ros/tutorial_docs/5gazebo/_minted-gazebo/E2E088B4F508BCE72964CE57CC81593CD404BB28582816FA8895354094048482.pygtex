@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}model\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}turret\PYGZus{}bot\PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}version\PYGZgt{}}1.0\PYG{n+nt}{\PYGZlt{}/version\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}sdf\PYGZgt{}}urdf/turret\PYGZus{}bot.urdf\PYG{n+nt}{\PYGZlt{}/sdf\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}author\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}name\PYGZgt{}}Aniruddh K B \PYG{n+nt}{\PYGZlt{}/name\PYGZgt{}}
+        \PYG{n+nt}{\PYGZlt{}email\PYGZgt{}}aniruddhkb@gmail.com\PYG{n+nt}{\PYGZlt{}/email\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}/author\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}description\PYGZgt{}}
+    A simple 2\PYGZhy{}dof robot for demonstration purposes.
+    \PYG{n+nt}{\PYGZlt{}/description\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/model\PYGZgt{}}
+\end{Verbatim}

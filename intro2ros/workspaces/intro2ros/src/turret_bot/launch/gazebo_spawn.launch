@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <param name = "/robot_description" textfile="$(find turret_bot)/urdf/turret_bot.urdf"/>
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch"/>
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+     args=" -unpause -urdf -model turret_bot 
+            -param robot_description " respawn="false"/>
+</launch>

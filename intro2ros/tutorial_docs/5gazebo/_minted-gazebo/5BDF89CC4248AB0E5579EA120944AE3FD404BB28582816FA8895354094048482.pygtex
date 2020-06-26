@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n+nt}{\PYGZlt{}dynamics} \PYG{n+na}{damping=}\PYG{l+s}{\PYGZdq{}0.001\PYGZdq{}} \PYG{n+na}{friction=}\PYG{l+s}{\PYGZdq{}0.001\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{export} \PYG{n+nv}{GAZEBO\PYGZus{}MODEL\PYGZus{}PATH}\PYG{o}{=}/usr/share/gazebo\PYGZhy{}9/models
+                         :\PYGZlt{}workspace\PYGZhy{}path\PYGZgt{}/src
+\end{Verbatim}

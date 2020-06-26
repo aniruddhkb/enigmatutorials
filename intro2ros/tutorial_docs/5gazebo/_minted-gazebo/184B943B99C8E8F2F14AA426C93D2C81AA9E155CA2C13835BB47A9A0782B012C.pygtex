@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{Inertia} \PYG{n}{Tensor} \PYG{o+ow}{is} \PYG{p}{:}
+    \PYG{o}{|} \PYG{l+m+mf}{110.117317} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{25.381306} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.000000} \PYG{o}{|}
+    \PYG{o}{|} \PYG{l+m+mf}{0.000000} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.000000} \PYG{l+m+mf}{128.597351} \PYG{o}{|}
+\end{Verbatim}
