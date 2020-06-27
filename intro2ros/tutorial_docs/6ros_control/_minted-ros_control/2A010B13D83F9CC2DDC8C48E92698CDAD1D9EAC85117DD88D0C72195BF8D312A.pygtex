@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}launch\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}param} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}/robot\PYGZus{}description\PYGZdq{}}
+           \PYG{n+na}{textfile=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find turret\PYGZus{}bot)/urdf/turret\PYGZus{}bot.urdf\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}rosparam} \PYG{n+na}{command=}\PYG{l+s}{\PYGZdq{}load\PYGZdq{}}
+              \PYG{n+na}{file=}\PYG{l+s}{\PYGZdq{}\PYGZdl{}(find turret\PYGZus{}bot)/config/config.yaml\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}
+          \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}
+          \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}robot\PYGZus{}state\PYGZus{}publisher\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}include} \PYG{n+na}{file =} \PYG{l+s}{\PYGZdq{}\PYGZdl{}(find gazebo\PYGZus{}ros)/launch/empty\PYGZus{}world.launch\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}urdf\PYGZus{}spawner\PYGZdq{}} \PYG{n+na}{pkg=}\PYG{l+s}{\PYGZdq{}gazebo\PYGZus{}ros\PYGZdq{}} \PYG{n+na}{type=}\PYG{l+s}{\PYGZdq{}spawn\PYGZus{}model\PYGZdq{}}
+        \PYG{n+na}{args=}\PYG{l+s}{\PYGZdq{} \PYGZhy{}unpause \PYGZhy{}urdf \PYGZhy{}model turret\PYGZus{}bot}
+\PYG{l+s}{            \PYGZhy{}param robot\PYGZus{}description \PYGZdq{}} \PYG{n+na}{respawn=}\PYG{l+s}{\PYGZdq{}false\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}node} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}controller\PYGZus{}spawner\PYGZdq{}}
+          \PYG{n+na}{pkg =} \PYG{l+s}{\PYGZdq{}controller\PYGZus{}manager\PYGZdq{}}
+          \PYG{n+na}{type =} \PYG{l+s}{\PYGZdq{}spawner\PYGZdq{}} \PYG{n+na}{respawn =} \PYG{l+s}{\PYGZdq{}false\PYGZdq{}}
+          \PYG{n+na}{args =} \PYG{l+s}{\PYGZdq{}joint\PYGZus{}state\PYGZus{}controller j1\PYGZus{}controller j2\PYGZus{}controller\PYGZdq{}} \PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/launch\PYGZgt{}}
+\end{Verbatim}

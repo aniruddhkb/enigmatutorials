@@ -1,0 +1,19 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 60
+j1_controller:
+  type: position_controllers/JointPositionController
+  joint: j1
+j2_controller:
+  type: position_controllers/JointPositionController
+  joint: j2
+gazebo_ros_control:
+  pid_gains:
+    j1:
+      p: 150
+      i: 0
+      d: 50
+    j2:
+      p: 1
+      i: 0
+      d: 0.3

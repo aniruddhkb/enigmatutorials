@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{\PYGZlt{}transmission} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}t1\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}type\PYGZgt{}}
+    transmission\PYGZus{}interface/SimpleTransmission
+  \PYG{n+nt}{\PYGZlt{}/type\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}joint} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}j1\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}hardwareInterface\PYGZgt{}}
+      hardware\PYGZus{}interface/PositionJointInterface
+    \PYG{n+nt}{\PYGZlt{}/hardwareInterface\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}actuator} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}a1\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}mechanicalReduction\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/mechanicalReduction\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/actuator\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/transmission\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}transmission} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}t2\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}type\PYGZgt{}}
+    transmission\PYGZus{}interface/SimpleTransmission
+  \PYG{n+nt}{\PYGZlt{}/type\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}joint} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}j2\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}hardwareInterface\PYGZgt{}}
+      hardware\PYGZus{}interface/PositionJointInterface
+    \PYG{n+nt}{\PYGZlt{}/hardwareInterface\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/joint\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}actuator} \PYG{n+na}{name=}\PYG{l+s}{\PYGZdq{}a2\PYGZdq{}}\PYG{n+nt}{\PYGZgt{}}
+    \PYG{n+nt}{\PYGZlt{}mechanicalReduction\PYGZgt{}}1\PYG{n+nt}{\PYGZlt{}/mechanicalReduction\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}/actuator\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/transmission\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}gazebo\PYGZgt{}}
+  \PYG{n+nt}{\PYGZlt{}plugin} \PYG{n+na}{name =} \PYG{l+s}{\PYGZdq{}gazebo\PYGZus{}ros\PYGZus{}control\PYGZdq{}}
+          \PYG{n+na}{filename=}\PYG{l+s}{\PYGZdq{}libgazebo\PYGZus{}ros\PYGZus{}control.so\PYGZdq{}}\PYG{n+nt}{/\PYGZgt{}}
+\PYG{n+nt}{\PYGZlt{}/gazebo\PYGZgt{}}
+\end{Verbatim}

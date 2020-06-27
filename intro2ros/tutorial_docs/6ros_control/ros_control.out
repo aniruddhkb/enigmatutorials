@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Notes}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Enabling ROS control}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Modifying the URDF}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{The config file}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{The launch file}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Controlling the robot}{}% 7
+\BOOKMARK [1][-]{section.5}{Looking ahead}{}% 8

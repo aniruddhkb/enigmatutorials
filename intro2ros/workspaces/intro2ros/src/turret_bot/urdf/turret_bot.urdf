@@ -73,7 +73,7 @@
     <joint name="j2" type="revolute">
         <origin xyz="0 0.05 0.475" rpy="0.0 0.0 0.0"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-3.141592" upper="3.141592" effort="1000" velocity="50"/>
+        <limit lower="-3.14" upper="3.14" effort="1000" velocity="50"/>
         <parent link="slider"/>
         <child link="rotor"/>
         <dynamics damping="0.001" friction="0.001"/>
@@ -86,5 +86,27 @@
     </gazebo>
     <gazebo reference="rotor">
         <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <transmission name = "t1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="j1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="a1">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name = "t2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="j2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="a2">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name = "gazebo_ros_control" filename="libgazebo_ros_control.so"/>
     </gazebo>
 </robot>

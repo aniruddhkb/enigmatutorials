@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <param name = "/robot_description" textfile="$(find turret_bot)/urdf/turret_bot.urdf"/>
+    <rosparam command="load" file="$(find turret_bot)/config/config.yaml"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch"/>
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+     args=" -unpause -urdf -model turret_bot 
+            -param robot_description " respawn="false"/>
+    <node name="controller_spawner" pkg = "controller_manager" type = "spawner" respawn = "false"
+     args = "joint_state_controller j1_controller j2_controller" />
+</launch>

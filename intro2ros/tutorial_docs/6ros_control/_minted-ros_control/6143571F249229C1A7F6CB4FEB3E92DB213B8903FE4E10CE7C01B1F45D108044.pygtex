@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nt}{joint\PYGZus{}state\PYGZus{}controller}\PYG{p}{:}
+  \PYG{n+nt}{type}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{joint\PYGZus{}state\PYGZus{}controller/JointStateController}
+  \PYG{n+nt}{publish\PYGZus{}rate}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{60}
+\PYG{n+nt}{j1\PYGZus{}controller}\PYG{p}{:}
+  \PYG{n+nt}{type}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{position\PYGZus{}controllers/JointPositionController}
+  \PYG{n+nt}{joint}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{j1}
+\PYG{n+nt}{j2\PYGZus{}controller}\PYG{p}{:}
+  \PYG{n+nt}{type}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{position\PYGZus{}controllers/JointPositionController}
+  \PYG{n+nt}{joint}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{j2}
+\PYG{n+nt}{gazebo\PYGZus{}ros\PYGZus{}control}\PYG{p}{:}
+  \PYG{n+nt}{pid\PYGZus{}gains}\PYG{p}{:}
+    \PYG{n+nt}{j1}\PYG{p}{:}
+      \PYG{n+nt}{p}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{150}
+      \PYG{n+nt}{i}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{0}
+      \PYG{n+nt}{d}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{50}
+    \PYG{n+nt}{j2}\PYG{p}{:}
+      \PYG{n+nt}{p}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{1}
+      \PYG{n+nt}{i}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{0}
+      \PYG{n+nt}{d}\PYG{p}{:} \PYG{l+lScalar+lScalarPlain}{0.3}
+\end{Verbatim}
