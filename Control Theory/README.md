@@ -1,5 +1,6 @@
 
-*NOTE:* All of these are slides from the Coursera Course "Control of Mobile Robots" by Georgia Tech. (Currently unavailable on coursera).
+#*NOTE:*
+All of these are slides from the Coursera Course "Control of Mobile Robots" by Georgia Tech. (Currently unavailable on coursera).
 
 MODULES:
 This comprises of the main lecture slides you would have to go through. Every module contains content of one week.
